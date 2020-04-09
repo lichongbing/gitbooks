@@ -1,0 +1,31 @@
+{
+    "title": "simple-mind-map examples",
+    "author": "snowdreams1006",
+    "description": "gitbook-plugin-simple-mind-map examples",
+    "gitbook": "3.2.3",
+    "links": {
+        "sidebar": {
+            "blog": "https://snowdreams1006.tech/"
+        }
+    },
+    "plugins": [
+        "simple-mind-map",    
+        "new-flowchart",
+        "mermaid-gb3@2.1.0"
+    ],
+    "pluginsConfig": {
+        "simple-mind-map": {
+            "type": "markdown",
+            "preset": "colorful",
+            "linkShape": "diagonal",
+            "autoFit": true,
+            "style": {
+                "height":  "750px",
+                "wight":  "1000px"
+              } 
+        }
+
+       
+        
+    }
+}
