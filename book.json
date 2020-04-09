@@ -12,7 +12,11 @@
         "simple-mind-map",    
         "new-flowchart",
         "mermaid-gb3@2.1.0",
-        "hide-element"
+        "hide-element",
+        "-lunr", "-search","search-plus@^0.0.11",
+        "back-to-top-button",
+        "openwrite"
+
     ],
     "pluginsConfig": {
         "simple-mind-map": {
@@ -27,6 +31,12 @@
         },
         "hide-element": {
             "elements": [".gitbook-link"]
+        },
+        "openwrite":{
+            "blogId": "18972-1576749538667-677",
+            "name": "谦谦君子",
+            "qrcode": "https://image.lichongbing.com/qrcode_for_gh_29bad7d68f3a_258.jpg",
+            "keyword": "更多"
         }
 
        
