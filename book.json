@@ -11,7 +11,8 @@
     "plugins": [
         "simple-mind-map",    
         "new-flowchart",
-        "mermaid-gb3@2.1.0"
+        "mermaid-gb3@2.1.0",
+        "hide-element"
     ],
     "pluginsConfig": {
         "simple-mind-map": {
@@ -23,6 +24,9 @@
                 "height":  "750px",
                 "wight":  "1000px"
               } 
+        },
+        "hide-element": {
+            "elements": [".gitbook-link"]
         }
 
        
