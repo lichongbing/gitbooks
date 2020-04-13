@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>简介 · Java笔记Blog</title>
+        <title>电商秒杀时序图 · Java笔记Blog</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -69,8 +69,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="java.html" />
     
+    <link rel="prev" href="java.html" />
     
 
     </head>
@@ -108,7 +108,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -134,7 +134,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="java2.html">
+        <li class="chapter active" data-level="1.3" data-path="java2.html">
             
                 <a href="java2.html">
             
@@ -177,7 +177,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >简介</a>
+        <a href="." >电商秒杀时序图</a>
     </h1>
 </div>
 
@@ -193,7 +193,49 @@
                                 <section class="normal markdown-section">
                                 
 <div id="vip-container">
-    <h1 id="java-&#x5F00;&#x53D1;&#x7B14;&#x8BB0;">Java &#x5F00;&#x53D1;&#x7B14;&#x8BB0;</h1>
+    <pre><code class="lang-flow">
+start=&gt;start: Start
+end=&gt;end: End
+heyJude=&gt;operation: hey Jude
+doNot=&gt;operation: don&apos;t
+makeItBad=&gt;condition: make it bad
+beAfraid=&gt;condition: be afraid
+letMeDown=&gt;condition: let me down
+takeASadSong=&gt;operation: take a sad song and make it better
+youWereMade=&gt;operation: you were made to go out and get her
+youHaveFound=&gt;operation: you have found her, now go and get her
+rememberTo=&gt;operation: remember to
+letHerInto=&gt;condition: let her into your heart
+letHerUnder=&gt;operation: let her under your skin
+thenYou=&gt;operation: then you
+canStart=&gt;condition: can start
+begin=&gt;operation: begin
+toMakeItBetter=&gt;operation: to make it better
+betterbetter=&gt;operation: better better better better better waaaaa
+na=&gt;operation: na
+
+start-&gt;heyJude-&gt;doNot-&gt;end
+doNot-&gt;makeItBad
+makeItBad(no)-&gt;beAfraid
+beAfraid(no)-&gt;letMeDown
+makeItBad(yes)-&gt;takeASadSong
+beAfraid(yes)-&gt;youWereMade
+letMeDown(yes)-&gt;youHaveFound
+takeASadSong-&gt;rememberTo
+youWereMade-&gt;rememberTo
+youHaveFound-&gt;rememberTo
+rememberTo-&gt;letHerInto
+letHerInto(no)-&gt;letHerUnder
+letHerInto(yes)-&gt;thenYou
+letHerUnder-&gt;thenYou
+thenYou-&gt;canStart
+canStart(no)-&gt;begin
+canStart(yes)-&gt;toMakeItBetter
+begin-&gt;toMakeItBetter
+toMakeItBetter-&gt;betterbetter
+betterbetter-&gt;na
+na-&gt;end
+</code></pre>
 
 </div>
 
@@ -222,10 +264,10 @@
 
             
                 
-                
-                <a href="java.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Java基础知识思维导图">
-                    <i class="fa fa-angle-right"></i>
+                <a href="java.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Java基础知识思维导图">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -234,7 +276,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"简介","level":"1.1","depth":1,"next":{"title":"Java基础知识思维导图","level":"1.2","depth":1,"path":"java.md","ref":"java.md","articles":[]},"dir":"ltr"},"config":{"plugins":["simple-mind-map","new-flowchart","mermaid-gb3@2.1.0","hide-element","-lunr","-search","search-plus@^0.0.11","back-to-top-button","openwrite","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"new-flowchart":{},"livereload":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"openwrite":{"blogId":"18972-1576749538667-677","name":"谦谦君子","qrcode":"https://image.lichongbing.com/qrcode_for_gh_29bad7d68f3a_258.jpg","keyword":"更多"},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{"height":"750px","wight":"1000px"},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Java笔记Blog","links":{"sidebar":{"blog":"https://blog.lichongbing.com/"}},"gitbook":"3.2.3","description":"gitbook-plugin-simple-mind-map examples"},"file":{"path":"README.md","mtime":"2020-04-09T08:09:47.869Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-09T12:27:22.570Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"电商秒杀时序图","level":"1.3","depth":1,"previous":{"title":"Java基础知识思维导图","level":"1.2","depth":1,"path":"java.md","ref":"java.md","articles":[]},"dir":"ltr"},"config":{"plugins":["simple-mind-map","new-flowchart","mermaid-gb3@2.1.0","hide-element","-lunr","-search","search-plus@^0.0.11","back-to-top-button","openwrite","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"new-flowchart":{},"livereload":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"openwrite":{"blogId":"18972-1576749538667-677","name":"谦谦君子","qrcode":"https://image.lichongbing.com/qrcode_for_gh_29bad7d68f3a_258.jpg","keyword":"更多"},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{"height":"750px","wight":"1000px"},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Java笔记Blog","links":{"sidebar":{"blog":"https://blog.lichongbing.com/"}},"gitbook":"3.2.3","description":"gitbook-plugin-simple-mind-map examples"},"file":{"path":"java2.md","mtime":"2020-04-09T12:26:44.883Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-09T12:27:22.570Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
