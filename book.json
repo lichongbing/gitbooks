@@ -15,7 +15,8 @@
         "hide-element",
         "-lunr", "-search","search-plus@^0.0.11",
         "back-to-top-button",
-        "openwrite"
+        "openwrite",
+        "code"
 
     ],
     "pluginsConfig": {
