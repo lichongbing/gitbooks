@@ -4,8 +4,8 @@
 cd /www/gitbooks/
 
 # 更新代码
-git fetch --all
-git reset --hard origin/master
+# git fetch --all
+# git reset --hard origin/master
 git pull
 
 
