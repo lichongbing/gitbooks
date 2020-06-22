@@ -19,7 +19,8 @@
         "code",
         "prism",
         "-highlight",
-        "-livereload"
+        "-livereload",
+        "expandable-chapters"
 
     ],
     "pluginsConfig": {
