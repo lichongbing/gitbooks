@@ -85,7 +85,8 @@ h.move();　  //完成马类对象h的移动：马儿跑
 假设我们把对象的属性（数据）暴露出来，外界可以任意接触到它甚至能改变它。读者可以先看下面的程序，看看会产生什么问题。
 
 范例8-1 类的封装性使用引例—— 一只品质不可控的猫（TestCat.Java）
-```
+
+```java
 public class TestCat　{　　 
     public static void main(String[] args){　　
         　  MyCat aCat = new MyCat();　　
@@ -114,7 +115,7 @@ public class TestCat　{　　
 #### 8.2.3 类的封装实例
 读者可以看到，前面列举的程序都是用对象直接访问类中的属性，在面向对象编程法则里，这是不允许的。所以为了避免发生这样类似的错误，通常要将类中的属性封装，用关键词“private”声明为私有，从而保护起来。对范例TestCat.Java做了相应的修改后，就可构成下面的程序。
 范例8-2 类的封装实例—— 一只难以访问的猫（TestCat.Java）
-```
+```java
 　public class TestCat
 　{
 　　 public static void main(String[] args)
@@ -139,7 +140,7 @@ public class TestCat　{　　
 
 代码详解第13~19行声明了一个新的类MyCat，类中有属性weight，与前面范例不同的是，这里的属性在声明时，前面加上了访问控制修饰符private。【范例分析】可以看到，本程序与上面的范例8-1相比，在声明属性weight前，多了个修饰符private（私有的）。但就是这一个小小的关键字，却使得下面同样的代码连编译都无法通过。
 
-```
+```java
 MyCat  aCat = new MyCat();
 aCat.weight = -10;　　　 //设置MyCat的属性值，非法访问
 int temp = aCat.weight;　　//获取MyCat的属性值，非法访问其
@@ -156,7 +157,7 @@ int temp = aCat.weight;　　//获取MyCat的属性值，非法访问其
 通常，对属性值设置的方法被命名为SetXxx()，其中Xxx为任意有意义的名称，这类方法可统称为Setter方法。而对取属性值的方法通常命名为GetYyy，其中Yyy为任意有意义的名称，这类方法可统称为Getter方法。请看下面的范例。
 范例8-3 类私有属性的Setter和Getter方法—— 一只品质可控的猫（TestCat.java）
 
-```
+```java
 　 public class TestCat
 　 {
     　　  public static void main(String[] args)
@@ -205,7 +206,7 @@ int temp = aCat.weight;　　//获取MyCat的属性值，非法访问其
 下面的这个范例添加了一个MakeSound()方法，通过修饰符private（私有）将其封装了起来。
 范例8-4 方法的封装使用（TestCat.Java）
 
-```
+```java
 public class TestCat  　 
 { 　  public static void main(String[] args)　　  {
     　　　　MyCat aCat = new MyCat();
@@ -242,7 +243,7 @@ public class TestCat  　
 一旦方法的访问权限被声明为private（私有的），那么这个方法就只能被类内部方法所调用。如果想让上述代码编译成功，其中一种方法是，将第10行的代码删除，而在GetWeight()中添加调用MakeSound()方法的语句，
 如下所示。
 
-```
+```java
 public float GetWeight()
 
 {　  MakeSound();　  //方法内添加的方法调用　
@@ -258,7 +259,7 @@ public float GetWeight()
 如果类中的某些数据在初始化后，不想再被外界修改，则可以使用构造方法配合私有化的Setter 函数来实现该数据的封装，
 如下所示。范例8-5 使用构造函数实现数据的封装（TestEncapsulation.Java）
 
-```
+```java
 　 class MyCat
 　 {
 　　  // 创建私有化的属性weight，height  
@@ -350,7 +351,7 @@ class 子类extends父类
 首先，我们观察一下下面的例子，在下面的例子中，包括Person和Student两个类。
 范例8-6 继承的引出（LeadInherit.Java）
 
-```
+```java
 
 　 class Person {
 　　  String name;
@@ -409,7 +410,7 @@ class 子类extends父类
 
 范例8-7 类的继承演示程序（InheritDemo.Java）
 
-```
+```java
 　 class Person {
 　　  String name;
 　　  int age;
@@ -494,7 +495,7 @@ final在Java之中称为终结器（terminator）：
 范例8-8 final标记的方法不能被子类覆写实例（TestFinalDemo.java）
 
 
-```
+```java
 　class Person
 　{
 　　// 此方法声明为final不能被子类覆写
@@ -532,7 +533,7 @@ final在Java之中称为终结器（terminator）：
 
 范例8-9 用final继承的限制（InheritRestrict.java）
 
-```
+```java
 
 　 //定义被final修饰的父类
 　 final class SuperClass
@@ -573,7 +574,7 @@ final在Java之中称为终结器（terminator）：
 范例8-10 子类对象的实例化（SubInstantProcess.java）
 
 
-```
+```java
 　 class Person
 　 {
 　　  String name ;
@@ -624,7 +625,7 @@ System.out.println("##### 子类构造：
 将范例8-10做相应的修改，就构成了下面的范例。
 范例8-11 super调用父类中的构造方法（SuperDemo.Java）
 
-```
+```java
 　  class Person
 　 {
 　　  String name;
@@ -667,7 +668,7 @@ System.out.println("##### 子类构造：
 super.父类中的属性;super.父类中的方法() ;
 对范例8-11稍加改造，就形成了通过super调用父类属性和方法的范例8-12。范例8-12 通过super调用父类的属性和方法（SuperDemo2.Java）
 
-```
+```java
 
 　 class Person
 　 {
@@ -719,7 +720,7 @@ super.父类中的属性;super.父类中的方法() ;
 第01~13行声明了一个名为Person的类，并声明了name和age两个属性、一个返回String类型的talk()方法，以及一个无参构造方法Person()，父类的构造方法是个空方法体，它并没有实施初始化。第14~30行声明了一个名为Student的类，此类直接继承自Person类。第21行和第22行，通过“super.属性”的方式调用父类中的name和age属性，并分别赋值。第25行通过“super.方法名”的方式调用父类中的talk()方法，打印信息。从程序中可以看到，子类Student可以通过super调用父类中的属性或方法。但是细心的读者在本例 中可以发现，如果第21行、第22行、第25行换成this调用也是可以的，那为什么还要用super呢？super 是相对于继承而言的。super 代表的是当前类的父类，而this是代表当前类。如果父类的属性和方法的访问权限不是private（私有的），那么这些属性和方法在子类中是可视的，换句话说，这些属性和方法也可视为当前类所有的，那么用“this.”来访问也是理所当然的。如果子类对“父类”很“见外”，分得很清楚，那么就可用 “super.”访问来自于父类的属性和方法。8.4.3 限制子类的访问有时候，父类也想保护自己的“隐私”，即使自己的成员被子类继承了，但并不希望子类可以访问自己类中全部的属性或方法，这时，就需要将一些属性与方法隐藏起来，不让子类去使用。为此可在声明属性或方法时加上“private”关键字，表示私有访问权限，即除了声明该属性或方法的所在类，其他外部的类（包括子类）均无权访问。
 范例8-13 限制子类的访问（RestrictVisit.Java）
 
-```
+```java
 
 　class Person
 　{
@@ -753,7 +754,7 @@ Student类继承自Person类，所以父类的数据（属性）成员name和age
 针对范例8-13存在的问题，我们可以用父类的方法（如构造方法）来访问父类的私有数据成员。请参见下面的范例。
 范例8-14 子类访问父类的私有成员（RestrictVisit2.Java）
 
-```
+```java
 
 　 class Person{
 　　  // 在这里使用private将属性封装
@@ -822,7 +823,7 @@ Student类继承自Person类，所以父类的数据（属性）成员name和age
 所谓的属性覆盖（或称覆写），指的是子类定义了和父类之中名称相同的属性。观察如下代码。
 范例8-15 属性（数据成员）的覆写（OverrideData.java）
 
-```
+```java
 　 class Book 
 　 {
 　　  String info = "Hello World." ;
@@ -858,7 +859,7 @@ Student类继承自Person类，所以父类的数据（属性）成员name和age
 然而，范例8-15所示的代码并没有太大的意义，它并没有实现真正的覆写。从开发角度来说，为了满足类的封装型，类中的属性一般都需要使用private封装，一旦封装之后，子类根本就“看不见”父类的属性成员，子类定义的同名属性成员，其实就是一个“全新的”数据成员，所谓的覆写操作就完全没有意义了。8.5.2 方法的覆写“覆写（Override）”的概念与“重载（Overload）”有相似之处。所谓“重载”，即方法名称相同，方法的参数不同（包括类型不同、顺序不同和个数不同），也就是它们的方法签名（包括方法名+参数列表）不同。重载以表面看起来一样的方式——方法名相同，却通过传递不同形式的参数，来完成不同类型的工作，以这样“一对多”的方式实现“静态多态”。当一个子类继承一个父类，如果子类中的方法与父类中的方法的名称、参数个数及类型且返回值类型等都完全一致时，就称子类中的这个方法“覆写”了父类中的方法。同理，如果子类中重复定义了父类中已有的属性，则称此子类中的属性覆写了父类中的属性。class  Super　　　//父类{　 返回值类型  方法名（参数列表）　 {　}}class Sub extends Super  //子类{　 返回值　方法名（参数列表）//与父类的方法同名，覆写父类中的方法　 {　  }}再回顾一下在范例8-14留下的问题，子类Student中的print()方法和父类的print()一模一样，那么子类的print()方法就完全覆盖了父类的print()方法。而子类自己的print()方法是无法访问父类的私有属性成员的——这是封装性的体现，因此就无法通过编译。下面我们再举例说明这个概念。范例8-16 子类覆写父类的实现（Override.java）
 
 
-```
+```java
 　 class Person
 　 {
 　　  String name;
@@ -907,7 +908,7 @@ Student类继承自Person类，所以父类的数据（属性）成员name和age
 第34行用子类对象调用talk()方法，但此时调用的是子类中的talk()方法。从输出结果可以看到，在子类Student中覆写了父类Person中的talk()方法，所以子类对象在调用talk()方法时，实际上调用的是子类中定义的方法。另外可以看到，子类的talk()方法与父类的talk()方法在声明权限时，都声明为public，也就是说这两个方法的访问权限都是一样的。
 从范例8-16程序中可以看出，第34行调用talk()方法，实际上调用的只是子类的方法，那如果的确需要调用父类中的方法，又该如何实现呢？请看下面的范例，此范例修改自上一个范例。范例8-17 super调用父类的方法（Override2.java）
 
-```
+```java
    class Person
 　 {
 　　  String name;
@@ -966,7 +967,7 @@ Annotation（中文翻译为“注解”或“注释”）实际上表示的是�
 范例8-18 由于手误导致覆写错误(OverrideError.java)
 
 
-```
+```java
 　 class Message
 
 　 {
@@ -991,7 +992,7 @@ Annotation（中文翻译为“注解”或“注释”）实际上表示的是�
 第03~06行原本打算覆写toString方法，却由于手误导致覆写“错误”——tostring()，其中的字符“S”被错误小写，而Java是区分大小写的，这时不会产生编译错误，因为JDK会认为tostring()是一个新的方法，可是从实际需求上讲，这个方法应该是方法toString()的覆写。这种语义上的错误远远比语法错误难找得多。因此，为了保证这种错误能在程序编译的时候就可以发现，可在方法覆写时增加上“@Override”注解。@Override用在方法之上，就是用来告诉编译器，这个方法是用来覆写来自父类的同名方法，如果父类没有这个所谓的“同名”方法，就会发出警告信息。我们添加注解到上面的范例中，就可以得到如下范例。
 范例8-19 使用@Override Annotation(OverrideAnnotation.java)
 
-```
+```java
 　 class Message
 　 {
 　　  @Override
@@ -1030,7 +1031,7 @@ Eclipse作为优秀的IDE开发环境，即使在不编译代码的情况下，�
 这种多态是在代码编译阶段就确定下来的。还有一种多态形式，在程序运行阶段才能体现出来，这种方式称为动态联编，也称为晚期联编（Late Bingding）。
 下面用一个范例简单地介绍一下多态的概念。范例8-20 了解多态的基本概念（Poly.java）
 
-```
+```java
 
 　 class Person
 　 {
@@ -1082,7 +1083,7 @@ Eclipse作为优秀的IDE开发环境，即使在不编译代码的情况下，�
 第37行由父类对象调用fun2( )方法。从程序的输出结果中可以看到，p是父类Person的对象，但调用fun1( )方法的时候并没有调用Person的fun1( )方法，而是调用了子类Student中被覆写了的fun1( )方法。
 对于第34行的语句：Person p = new Student( )，我们分析如下。在赋值运算符“=”左侧，定义了父类Person对象p，而在赋值运算符“=”右侧，用“new Student( )”声明了一个子类无名对象，然后将该子类对象赋值为父类对象p，事实上，这时发生了向上转型。本例中展示的是一个父类仅有一个子类，这种“一对一”的继承模式，并没有体现出“多”态来。在后续章节的范例中，读者就会慢慢体会到多态中的“多”从何而来。8.6.2 方法多态性在Java中，方法的多态性体现在方法的重载，在这里我们再用多态的眼光复习一下这部分内容，相信你会有更深入的理解。方法的多态即是通过传递不同的参数来令同一方法接口实现不同的功能。
 下面我们通过一个简单的方法重载的例子来了解Java方法多态性的概念。范例8-21 对象多态性的使用（FuncPoly.java）
-```
+```java
 　 public class FuncPoly {
 　　  //定义了两个方法名完全相同的方法，该方法实现求和的功能
 　　  void sum(int i ){
@@ -1108,7 +1109,7 @@ Eclipse作为优秀的IDE开发环境，即使在不编译代码的情况下，�
 （2）向下转型。与向上转型对应的一个概念就是“向下转型”，所谓向下转型，也就是说父类的对象可以转换为子类对象，但是需要注意的是，这时则必须进行强制的类型转换。
 以上内容可以概括成下面的两句话。（1）向上转型可以自动完成。（2）向下转型必须进行强制类型转换。注意读者需要注意的是，并非全部的父类对象都可以强制转换为子类对象，毕竟这种转换是不安全的。下面我们通过编程实现8.1.3节提及的例子，来说明多态在面向对象编程中不可替代的作用。
 范例8-22 使用多态（ObjectPoly.java）
-```
+```java
 　 class Animal{
 　　  public void move(){
 　　　　System.out.println("动物移动！");
@@ -1158,7 +1159,7 @@ Eclipse作为优秀的IDE开发环境，即使在不编译代码的情况下，�
 在第27~29行分别实例化了3个子类对象：f、b和h。
 第30~32行，通过赋值操作，将这些子类对象向上类型转换为Animal类型。然后经过父类对象a调用其move方法，这时我们发现，实际调用的却是各个子类对象的move方法。父类对象依据被赋值的每个子类对象的类型，做出恰当的响应（即与对象具体类别相适应的反应），这就是对象多态性的关键思想。同样的消息或接口（在本例中都是move）在发送给不同的对象时，会产生多种形式的结果，这就是多态性的本质。利用对象多态性，我们可以设计和实现更具扩展性的软件系统。提示简单来说，继承是子类使用父类的方法，而多态则是父类使用子类的方法。但更为确切地说，多态是父类使用被子类覆盖的同名方法，如果子类的方法是全新的，不存在与父类同名的方法，那么父类也不可能使用子类自己独有的“个性化”方法。有一点需要读者注意，即使实施向上转型，父类对象所能够看见的方法依然还是本类之中所定义的方法（即被子类覆盖的方法）。如果子类扩充了一些新方法的话，那么父类对象是无法找到的。请观察下面的范例。
 范例8-23 父类对象找不到子类的扩充方法（NewMethodTest.java）
-```
+```java
 　class baseClass 
 　{
 　　 public void print() 
@@ -1199,7 +1200,7 @@ Eclipse作为优秀的IDE开发环境，即使在不编译代码的情况下，�
 在第24行，从上面运行结果可以看出，baseObj调用的子类所定义的print()方法， 但值得我们关注的是，如果去掉第25行的注释符号“//”，就会产生如下的编译错误：“The method getB() is undefined for the baseClass （没有为类型baseClass定义方法 getB()）”，如下图所示。尽管这个父类对象baseObj的实例化依靠的是子类完成的，但是它能够看见的还是自己本类所定义的方法名称，如果方法被子类覆写了，则调用的方法体也是被子类所覆写过的方法。这其实也体现了“父母不管儿女事”的这种低耦合思想。如果说现在非要去调用subClass类的getB()方法，那么就需要进行向下转型，即将父类对象变为子类实例，向下转型需要采用强制转换的方式完成。请参见如下范例。
 范例8-24 实现向下转型（DownCastTest.java）
 
-```
+```java
 　class baseClass 
 　{
 　　 public void print() 
@@ -1240,7 +1241,7 @@ Eclipse作为优秀的IDE开发环境，即使在不编译代码的情况下，�
 参见范例8-22。但是，在某些场景下，我们不希望父类的方法被子类方法覆写，即子类实例化后会调用父类的方法，而不是子类的方法，这种情况下该怎么办？这就需要用到另外一个概念——隐藏（hide）。被关键词static修饰的静态方法是不能被覆盖的，Java就是利用这一个特性达到隐藏的效果。请观察下面的范例。
 范例8-25 隐藏子类的成员（HideSubClass.java）
 
-```
+```java
 　 class Father
 　 {
 　　  public static void overWritting()
@@ -1335,7 +1336,7 @@ OOP也添加了一个新的多边形类。需要注意的是，POP修改的代�
 
 （1）在子类中哪些方法隐藏了父类的方法?
 （2）在子类中哪些方法覆盖了父类的方法?并通过编程实践验证上述问题。
-```
+```java
 class classA
 {　　 void  methodOne(int i) { System.out.println("ClassA: methodOne, i = " + i); }
  　　 void  methodTwo(int i){ System.out.println("ClassA: methodTwo, i = " + i); }

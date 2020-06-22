@@ -16,7 +16,10 @@
         "-lunr", "-search","search-plus@^0.0.11",
         "back-to-top-button",
         "openwrite",
-        "code"
+        "code",
+        "prism",
+        "-highlight",
+        "-livereload"
 
     ],
     "pluginsConfig": {
@@ -38,6 +41,11 @@
             "name": "谦谦君子",
             "qrcode": "https://image.lichongbing.com/qrcode_for_gh_29bad7d68f3a_258.jpg",
             "keyword": "更多"
+        },
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-tomorrow.css"
+            ]
         }
 
        
