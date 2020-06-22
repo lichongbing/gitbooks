@@ -219,21 +219,193 @@ employeeec表（员工奖励惩罚表）
 
 
 
+employeeremove表（员工调岗表）
+
+| 列名       | 数据类型     | 字段类型 | 长度 | 是否为空 | 默认值 | 备注       |
+| ---------- | ------------ | -------- | ---- | -------- | ------ | ---------- |
+| afterDepId | int(11)      | int      |      | YES      |        | 调动后部门 |
+| afterJobId | int(11)      | int      |      | YES      |        | 调动后职位 |
+| eid        | int(11)      | int      |      | YES      |        |            |
+| id         | int(11)      | int      |      | NO       |        |            |
+| reason     | varchar(255) | varchar  | 255  | YES      |        | 调动原因   |
+| remark     | varchar(255) | varchar  | 255  | YES      |        |            |
+| removeDate | date         | date     |      | YES      |        | 调动日期   |
+
+employeetrain表（员工培训表）
+
+| 列名         | 数据类型     | 字段类型 | 长度 | 是否为空 | 默认值 | 备注     |
+| ------------ | ------------ | -------- | ---- | -------- | ------ | -------- |
+| eid          | int(11)      | int      |      | YES      |        | 员工编号 |
+| id           | int(11)      | int      |      | NO       |        |          |
+| remark       | varchar(255) | varchar  | 255  | YES      |        | 备注     |
+| trainContent | varchar(255) | varchar  | 255  | YES      |        | 培训内容 |
+| trainDate    | date         | date     |      | YES      |        | 培训日期 |
 
 
+empsalary表（员工薪资关联表）
+
+| 列名 | 数据类型 | 字段类型 | 长度 | 是否为空 | 默认值 | 备注 |
+| ---- | -------- | -------- | ---- | -------- | ------ | ---- |
+| eid  | int(11)  | int      |      | YES      |        |      |
+| id   | int(11)  | int      |      | NO       |        |      |
+| sid  | int(11)  | int      |      | YES      |        |      |
+
+hr表
+
+| 列名      | 数据类型     | 字段类型 | 长度 | 是否为空 | 默认值 | 备注     |
+| --------- | ------------ | -------- | ---- | -------- | ------ | -------- |
+| address   | varchar(64)  | varchar  | 64   | YES      |        | 联系地址 |
+| enabled   | tinyint(1)   | tinyint  |      | YES      | 1      |          |
+| id        | int(11)      | int      |      | NO       |        | hrID     |
+| name      | varchar(32)  | varchar  | 32   | YES      |        | 姓名     |
+| password  | varchar(255) | varchar  | 255  | YES      |        | 密码     |
+| phone     | char(11)     | char     | 11   | YES      |        | 手机号码 |
+| remark    | varchar(255) | varchar  | 255  | YES      |        |          |
+| telephone | varchar(16)  | varchar  | 16   | YES      |        | 住宅电话 |
+| userface  | varchar(255) | varchar  | 255  | YES      |        |          |
+| username  | varchar(255) | varchar  | 255  | YES      |        | 用户名   |
+
+hr_role表（hr角色表）
+
+| 列名 | 数据类型 | 字段类型 | 长度 | 是否为空 | 默认值 | 备注 |
+| ---- | -------- | -------- | ---- | -------- | ------ | ---- |
+| hrid | int(11)  | int      |      | YES      |        |      |
+| id   | int(11)  | int      |      | NO       |        |      |
+| rid  | int(11)  | int      |      | YES      |        |      |
+
+joblevel表（职称表）
+
+| 列名       | 数据类型                                     | 字段类型  | 长度 | 是否为空 | 默认值            | 备注     |
+| ---------- | -------------------------------------------- | --------- | ---- | -------- | ----------------- | -------- |
+| createDate | timestamp                                    | timestamp |      | YES      | CURRENT_TIMESTAMP |          |
+| enabled    | tinyint(1)                                   | tinyint   |      | YES      | 1                 |          |
+| id         | int(11)                                      | int       |      | NO       |                   |          |
+| name       | varchar(32)                                  | varchar   | 32   | YES      |                   | 职称名称 |
+| titleLevel | enum('正高级','副高级','中级','初级','员级') | enum      | 3    | YES      |                   |          |
+
+menu表（菜单表）
+
+| 列名        | 数据类型    | 字段类型 | 长度 | 是否为空 | 默认值 | 备注 |
+| ----------- | ----------- | -------- | ---- | -------- | ------ | ---- |
+| component   | varchar(64) | varchar  | 64   | YES      |        |      |
+| enabled     | tinyint(1)  | tinyint  |      | YES      | 1      |      |
+| iconCls     | varchar(64) | varchar  | 64   | YES      |        |      |
+| id          | int(11)     | int      |      | NO       |        |      |
+| keepAlive   | tinyint(1)  | tinyint  |      | YES      |        |      |
+| name        | varchar(64) | varchar  | 64   | YES      |        |      |
+| parentId    | int(11)     | int      |      | YES      |        |      |
+| path        | varchar(64) | varchar  | 64   | YES      |        |      |
+| requireAuth | tinyint(1)  | tinyint  |      | YES      |        |      |
+| url         | varchar(64) | varchar  | 64   | YES      |        |      |
 
 
+menu_role表（菜单角色关联表）
+| 列名 | 数据类型 | 字段类型 | 长度 | 是否为空 | 默认值 | 备注 |
+| ---- | -------- | -------- | ---- | -------- | ------ | ---- |
+| id   | int(11)  | int      |      | NO       |        |      |
+| mid  | int(11)  | int      |      | YES      |        |      |
+| rid  | int(11)  | int      |      | YES      |        |      |
+
+msgcontent表（消息内容表）
+
+| 列名       | 数据类型     | 字段类型  | 长度 | 是否为空 | 默认值            | 备注 |
+| ---------- | ------------ | --------- | ---- | -------- | ----------------- | ---- |
+| createDate | timestamp    | timestamp |      | NO       | CURRENT_TIMESTAMP |      |
+| id         | int(11)      | int       |      | NO       |                   |      |
+| message    | varchar(255) | varchar   | 255  | YES      |                   |      |
+| title      | varchar(64)  | varchar   | 64   | YES      |                   |      |
+
+nation表（民族表）
+
+| 列名       | 数据类型     | 字段类型  | 长度 | 是否为空 | 默认值            | 备注 |
+| ---------- | ------------ | --------- | ---- | -------- | ----------------- | ---- |
+| id         | int(11)      | int       |      | NO       |                   |      |
+| name    | varchar(32) | varchar   | 32  | YES      |                   |      |
 
 
+oplog表（操作日志表）
+
+| 列名    | 数据类型     | 字段类型 | 长度 | 是否为空 | 默认值 | 备注     |
+| ------- | ------------ | -------- | ---- | -------- | ------ | -------- |
+| addDate | date         | date     |      | YES      |        | 添加日期 |
+| hrid    | int(11)      | int      |      | YES      |        | 操作员ID |
+| id      | int(11)      | int      |      | NO       |        |          |
+| operate | varchar(255) | varchar  | 255  | YES      |        | 操作内容 |
 
 
+politicsstatus表（政治面貌表）
+
+| 列名 | 数据类型    | 字段类型 | 长度 | 是否为空 | 默认值 | 备注 |
+| ---- | ----------- | -------- | ---- | -------- | ------ | ---- |
+| id   | int(11)     | int      |      | NO       |        |      |
+| name | varchar(32) | varchar  | 32   | YES      |        |      |
+
+position表( 职位表)
+
+| 列名       | 数据类型    | 字段类型  | 长度 | 是否为空 | 默认值            | 备注 |
+| ---------- | ----------- | --------- | ---- | -------- | ----------------- | ---- |
+| createDate | timestamp   | timestamp |      | YES      | CURRENT_TIMESTAMP |      |
+| enabled    | tinyint(1)  | tinyint   |      | YES      | 1                 |      |
+| id         | int(11)     | int       |      | NO       |                   |      |
+| name       | varchar(32) | varchar   | 32   | YES      |                   | 职位 |
+
+role表（角色表）
+| 列名   | 数据类型    | 字段类型 | 长度 | 是否为空 | 默认值 | 备注     |
+| ------ | ----------- | -------- | ---- | -------- | ------ | -------- |
+| id     | int(11)     | int      |      | NO       |        |          |
+| name   | varchar(64) | varchar  | 64   | YES      |        |          |
+| nameZh | varchar(64) | varchar  | 64   | YES      |        | 角色名称 |
+
+salary表（薪水表）
+| 列名                 | 数据类型    | 字段类型  | 长度 | 是否为空 | 默认值 | 备注         |
+| -------------------- | ----------- | --------- | ---- | -------- | ------ | ------------ |
+| accumulationFundBase | int(11)     | int       |      | YES      |        | 公积金基数   |
+| accumulationFundPer  | float       | float     |      | YES      |        | 公积金比率   |
+| allSalary            | int(11)     | int       |      | YES      |        | 应发工资     |
+| basicSalary          | int(11)     | int       |      | YES      |        | 基本工资     |
+| bonus                | int(11)     | int       |      | YES      |        | 奖金         |
+| createDate           | timestamp   | timestamp |      | YES      |        | 启用时间     |
+| id                   | int(11)     | int       |      | NO       |        |              |
+| lunchSalary          | int(11)     | int       |      | YES      |        | 午餐补助     |
+| medicalBase          | int(11)     | int       |      | YES      |        | 医疗基数     |
+| medicalPer           | float       | float     |      | YES      |        | 医疗保险比率 |
+| name                 | varchar(32) | varchar   | 32   | YES      |        |              |
+| pensionBase          | int(11)     | int       |      | YES      |        | 养老金基数   |
+| pensionPer           | float       | float     |      | YES      |        | 养老金比率   |
+| trafficSalary        | int(11)     | int       |      | YES      |        | 交通补助     |
+
+sysmsg表（系统消息表）
+
+| 列名  | 数据类型 | 字段类型 | 长度 | 是否为空 | 默认值 | 备注             |
+| ----- | -------- | -------- | ---- | -------- | ------ | ---------------- |
+| hrid  | int(11)  | int      |      | YES      |        | 这条消息是给谁的 |
+| id    | int(11)  | int      |      | NO       |        |                  |
+| mid   | int(11)  | int      |      | YES      |        | 消息id           |
+| state | int(11)  | int      |      | YES      | 0      | 0 未读 1 已读    |
+| type  | int(11)  | int      |      | YES      | 0      | 0表示群发消息    |
+
+mail_send_log表（邮件发送日志表）
+| 列名  | 数据类型 | 字段类型 | 长度 | 是否为空 | 默认值 | 备注             |
+| ----- | -------- | -------- | ---- | -------- | ------ | ---------------- |
+| hrid  | int(11)  | int      |      | YES      |        | 这条消息是给谁的 |
+| id    | int(11)  | int      |      | NO       |        |                  |
+| mid   | int(11)  | int      |      | YES      |        | 消息id           |
+| state | int(11)  | int      |      | YES      | 0      | 0 未读 1 已读    |
+| type  | int(11)  | int      |      | YES      | 0      | 0表示群发消息    |
+
+经过以上准备工作，项目环境就已经基本搭建成功了。另外，对于Redis的安装、启动等，读者可以参考第6章，这里不再赘述。
+
+## 登录模块
 
 
+### 后端接口实现
 
-
-
-
-
+后端权限认证采用 Spring Security 实现（本小节中大量知识点与第10章的内容相关，需要读练享握第10章的内容），数据库访问使用MyBatis,同时使用Redis实现认证信息缓存。因此叫自光添加如下依赖（依次是MvBatis 依赖、Spring Security 依赖、Redis 依赖、数据库连接池依赖、数据库驱动依赖以及缓存依赖）
+```XML
+＜dependency>
+<groupid>org.mybatis.spring.boot</groupld>
+<artifactld>>mvbatis-spring-boot-starter</artifactld>
+```
 
 
 
