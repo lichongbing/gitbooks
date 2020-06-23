@@ -1445,7 +1445,7 @@ npm run dev
 <pre class="language-"><code>Project name vuehr
 Project description A Vue.js project
 Author &#x6C5F;&#x5357;&#x4E00;&#x70B9;&#x96E8;
-&#xFF1C;wangsong0210@gmail.com
+&lt;wangsong0210@gmail.com
 Vue build standalone
 Install vue-router?ies
 Use ESLint to lint your code?No
@@ -1479,10 +1479,10 @@ Generated vuehr&quot;.
 <p>&#x5F53;&#x201C;npm run dev&#x201D;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x4E4B;&#x540E;&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165; <a href="http://localhost:8080,&#x663E;&#x793A;&#x9875;&#x9762;" target="_blank">http://localhost:8080,&#x663E;&#x793A;&#x9875;&#x9762;</a></p>
 <h3 id="&#x540E;&#x7AEF;&#x9879;&#x76EE;&#x6784;&#x5EFA;">&#x540E;&#x7AEF;&#x9879;&#x76EE;&#x6784;&#x5EFA;</h3>
 <p>&#x540E;&#x7AEF;&#x4F7F;&#x7528; Spring Boot &#x521B;&#x5EFA;&#x4E00;&#x4E2A; Spring Boot&#x5DE5;&#x7A0B;&#xFF0C;&#x6DFB;&#x52A0; spring-boot-starter-web &#x4F9D;&#x8D56;&#x5373;&#x53EF;&#xFF1A;</p>
-<pre class="language-"><code class="lang-xml">&#xFF1C;dependency&gt; 
-&#xFF1C;groupId&gt;org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
-&#xFF1C;artifactId&gt;spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
-&#xFF1C;&#xFF0F;dependency&gt;
+<pre class="language-"><code class="lang-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>&#xFF0F;dependency</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <p>&#x5F53;&#x7136;&#xFF0C;&#x540E;&#x7AEF;&#x6240;&#x9700;&#x7684;&#x4F9D;&#x8D56;&#x4E0D;&#x6B62;spring-boot-starter-web,&#x5728;&#x540E;&#x6587;&#x529F;&#x80FD;&#x4E0D;&#x65AD;&#x5B8C;&#x5584;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x518D;&#x7EE7;&#x7EED;&#x9F0E;&#x5177;&#x4ED6;&#x4F9D;&#x8D56;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x540E;&#x7AEF;&#x9879;&#x76EE;&#x6240;&#x9700;&#x7684;Redis &#x914D;&#x7F6E;&#x3001;&#x90AE;&#x4EF6;&#x53D1;&#x9001;&#x914D;&#x7F6E;&#x3001;POI&#x914D;&#x7F6E;&#x3001;WebSocket&#x914D;&#x7F6E;&#x7B49;&#x5C06;&#x5728;&#x6D89;&#x53CA;&#x76F8;&#x5173;&#x529F;&#x80FD;&#x65F6;&#x5411;&#x8BFB;&#x8005;&#x4ECB;&#x7ECD;&#x3002;</p>
 <h3 id="&#x6570;&#x636E;&#x6A21;&#x578B;&#x8BBE;&#x8BA1;">&#x6570;&#x636E;&#x6A21;&#x578B;&#x8BBE;&#x8BA1;</h3>
@@ -2731,29 +2731,191 @@ Generated vuehr&quot;.
 </tr>
 </tbody>
 </table>
-<p>role&#x8868;&#xFF08;&#x89D2;&#x8272;&#x8868;&#xFF09;
-| &#x5217;&#x540D;   | &#x6570;&#x636E;&#x7C7B;&#x578B;    | &#x5B57;&#x6BB5;&#x7C7B;&#x578B; | &#x957F;&#x5EA6; | &#x662F;&#x5426;&#x4E3A;&#x7A7A; | &#x9ED8;&#x8BA4;&#x503C; | &#x5907;&#x6CE8;     |
-| ------ | ----------- | -------- | ---- | -------- | ------ | -------- |
-| id     | int(11)     | int      |      | NO       |        |          |
-| name   | varchar(64) | varchar  | 64   | YES      |        |          |
-| nameZh | varchar(64) | varchar  | 64   | YES      |        | &#x89D2;&#x8272;&#x540D;&#x79F0; |</p>
-<p>salary&#x8868;&#xFF08;&#x85AA;&#x6C34;&#x8868;&#xFF09;
-| &#x5217;&#x540D;                 | &#x6570;&#x636E;&#x7C7B;&#x578B;    | &#x5B57;&#x6BB5;&#x7C7B;&#x578B;  | &#x957F;&#x5EA6; | &#x662F;&#x5426;&#x4E3A;&#x7A7A; | &#x9ED8;&#x8BA4;&#x503C; | &#x5907;&#x6CE8;         |
-| -------------------- | ----------- | --------- | ---- | -------- | ------ | ------------ |
-| accumulationFundBase | int(11)     | int       |      | YES      |        | &#x516C;&#x79EF;&#x91D1;&#x57FA;&#x6570;   |
-| accumulationFundPer  | float       | float     |      | YES      |        | &#x516C;&#x79EF;&#x91D1;&#x6BD4;&#x7387;   |
-| allSalary            | int(11)     | int       |      | YES      |        | &#x5E94;&#x53D1;&#x5DE5;&#x8D44;     |
-| basicSalary          | int(11)     | int       |      | YES      |        | &#x57FA;&#x672C;&#x5DE5;&#x8D44;     |
-| bonus                | int(11)     | int       |      | YES      |        | &#x5956;&#x91D1;         |
-| createDate           | timestamp   | timestamp |      | YES      |        | &#x542F;&#x7528;&#x65F6;&#x95F4;     |
-| id                   | int(11)     | int       |      | NO       |        |              |
-| lunchSalary          | int(11)     | int       |      | YES      |        | &#x5348;&#x9910;&#x8865;&#x52A9;     |
-| medicalBase          | int(11)     | int       |      | YES      |        | &#x533B;&#x7597;&#x57FA;&#x6570;     |
-| medicalPer           | float       | float     |      | YES      |        | &#x533B;&#x7597;&#x4FDD;&#x9669;&#x6BD4;&#x7387; |
-| name                 | varchar(32) | varchar   | 32   | YES      |        |              |
-| pensionBase          | int(11)     | int       |      | YES      |        | &#x517B;&#x8001;&#x91D1;&#x57FA;&#x6570;   |
-| pensionPer           | float       | float     |      | YES      |        | &#x517B;&#x8001;&#x91D1;&#x6BD4;&#x7387;   |
-| trafficSalary        | int(11)     | int       |      | YES      |        | &#x4EA4;&#x901A;&#x8865;&#x52A9;     |</p>
+<p>role&#x8868;&#xFF08;&#x89D2;&#x8272;&#x8868;&#xFF09;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5217;&#x540D;</th>
+<th>&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th>&#x957F;&#x5EA6;</th>
+<th>&#x662F;&#x5426;&#x4E3A;&#x7A7A;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>NO</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>varchar(64)</td>
+<td>varchar</td>
+<td>64</td>
+<td>YES</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>nameZh</td>
+<td>varchar(64)</td>
+<td>varchar</td>
+<td>64</td>
+<td>YES</td>
+<td></td>
+<td>&#x89D2;&#x8272;&#x540D;&#x79F0;</td>
+</tr>
+</tbody>
+</table>
+<p>salary&#x8868;&#xFF08;&#x85AA;&#x6C34;&#x8868;&#xFF09;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5217;&#x540D;</th>
+<th>&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th>&#x957F;&#x5EA6;</th>
+<th>&#x662F;&#x5426;&#x4E3A;&#x7A7A;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accumulationFundBase</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x516C;&#x79EF;&#x91D1;&#x57FA;&#x6570;</td>
+</tr>
+<tr>
+<td>accumulationFundPer</td>
+<td>float</td>
+<td>float</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x516C;&#x79EF;&#x91D1;&#x6BD4;&#x7387;</td>
+</tr>
+<tr>
+<td>allSalary</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x5E94;&#x53D1;&#x5DE5;&#x8D44;</td>
+</tr>
+<tr>
+<td>basicSalary</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x57FA;&#x672C;&#x5DE5;&#x8D44;</td>
+</tr>
+<tr>
+<td>bonus</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x5956;&#x91D1;</td>
+</tr>
+<tr>
+<td>createDate</td>
+<td>timestamp</td>
+<td>timestamp</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x542F;&#x7528;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>NO</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>lunchSalary</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x5348;&#x9910;&#x8865;&#x52A9;</td>
+</tr>
+<tr>
+<td>medicalBase</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x533B;&#x7597;&#x57FA;&#x6570;</td>
+</tr>
+<tr>
+<td>medicalPer</td>
+<td>float</td>
+<td>float</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x533B;&#x7597;&#x4FDD;&#x9669;&#x6BD4;&#x7387;</td>
+</tr>
+<tr>
+<td>name</td>
+<td>varchar(32)</td>
+<td>varchar</td>
+<td>32</td>
+<td>YES</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>pensionBase</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x517B;&#x8001;&#x91D1;&#x57FA;&#x6570;</td>
+</tr>
+<tr>
+<td>pensionPer</td>
+<td>float</td>
+<td>float</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x517B;&#x8001;&#x91D1;&#x6BD4;&#x7387;</td>
+</tr>
+<tr>
+<td>trafficSalary</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x4EA4;&#x901A;&#x8865;&#x52A9;</td>
+</tr>
+</tbody>
+</table>
 <p>sysmsg&#x8868;&#xFF08;&#x7CFB;&#x7EDF;&#x6D88;&#x606F;&#x8868;&#xFF09;</p>
 <table>
 <thead>
@@ -2815,22 +2977,746 @@ Generated vuehr&quot;.
 </tr>
 </tbody>
 </table>
-<p>mail_send_log&#x8868;&#xFF08;&#x90AE;&#x4EF6;&#x53D1;&#x9001;&#x65E5;&#x5FD7;&#x8868;&#xFF09;
-| &#x5217;&#x540D;  | &#x6570;&#x636E;&#x7C7B;&#x578B; | &#x5B57;&#x6BB5;&#x7C7B;&#x578B; | &#x957F;&#x5EA6; | &#x662F;&#x5426;&#x4E3A;&#x7A7A; | &#x9ED8;&#x8BA4;&#x503C; | &#x5907;&#x6CE8;             |
-| ----- | -------- | -------- | ---- | -------- | ------ | ---------------- |
-| hrid  | int(11)  | int      |      | YES      |        | &#x8FD9;&#x6761;&#x6D88;&#x606F;&#x662F;&#x7ED9;&#x8C01;&#x7684; |
-| id    | int(11)  | int      |      | NO       |        |                  |
-| mid   | int(11)  | int      |      | YES      |        | &#x6D88;&#x606F;id           |
-| state | int(11)  | int      |      | YES      | 0      | 0 &#x672A;&#x8BFB; 1 &#x5DF2;&#x8BFB;    |
-| type  | int(11)  | int      |      | YES      | 0      | 0&#x8868;&#x793A;&#x7FA4;&#x53D1;&#x6D88;&#x606F;    |</p>
+<p>mail_send_log&#x8868;&#xFF08;&#x90AE;&#x4EF6;&#x53D1;&#x9001;&#x65E5;&#x5FD7;&#x8868;&#xFF09;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5217;&#x540D;</th>
+<th>&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th>&#x5B57;&#x6BB5;&#x7C7B;&#x578B;</th>
+<th>&#x957F;&#x5EA6;</th>
+<th>&#x662F;&#x5426;&#x4E3A;&#x7A7A;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hrid</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x8FD9;&#x6761;&#x6D88;&#x606F;&#x662F;&#x7ED9;&#x8C01;&#x7684;</td>
+</tr>
+<tr>
+<td>id</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>NO</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mid</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>YES</td>
+<td></td>
+<td>&#x6D88;&#x606F;id</td>
+</tr>
+<tr>
+<td>state</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>YES</td>
+<td>0</td>
+<td>0 &#x672A;&#x8BFB; 1 &#x5DF2;&#x8BFB;</td>
+</tr>
+<tr>
+<td>type</td>
+<td>int(11)</td>
+<td>int</td>
+<td></td>
+<td>YES</td>
+<td>0</td>
+<td>0&#x8868;&#x793A;&#x7FA4;&#x53D1;&#x6D88;&#x606F;</td>
+</tr>
+</tbody>
+</table>
 <p>&#x7ECF;&#x8FC7;&#x4EE5;&#x4E0A;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#xFF0C;&#x9879;&#x76EE;&#x73AF;&#x5883;&#x5C31;&#x5DF2;&#x7ECF;&#x57FA;&#x672C;&#x642D;&#x5EFA;&#x6210;&#x529F;&#x4E86;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x5BF9;&#x4E8E;Redis&#x7684;&#x5B89;&#x88C5;&#x3001;&#x542F;&#x52A8;&#x7B49;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x7B2C;6&#x7AE0;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;</p>
 <h2 id="&#x767B;&#x5F55;&#x6A21;&#x5757;">&#x767B;&#x5F55;&#x6A21;&#x5757;</h2>
 <h3 id="&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x5B9E;&#x73B0;">&#x540E;&#x7AEF;&#x63A5;&#x53E3;&#x5B9E;&#x73B0;</h3>
 <p>&#x540E;&#x7AEF;&#x6743;&#x9650;&#x8BA4;&#x8BC1;&#x91C7;&#x7528; Spring Security &#x5B9E;&#x73B0;&#xFF08;&#x672C;&#x5C0F;&#x8282;&#x4E2D;&#x5927;&#x91CF;&#x77E5;&#x8BC6;&#x70B9;&#x4E0E;&#x7B2C;10&#x7AE0;&#x7684;&#x5185;&#x5BB9;&#x76F8;&#x5173;&#xFF0C;&#x9700;&#x8981;&#x8BFB;&#x7EC3;&#x4EAB;&#x63E1;&#x7B2C;10&#x7AE0;&#x7684;&#x5185;&#x5BB9;&#xFF09;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x8BBF;&#x95EE;&#x4F7F;&#x7528;MyBatis,&#x540C;&#x65F6;&#x4F7F;&#x7528;Redis&#x5B9E;&#x73B0;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#x7F13;&#x5B58;&#x3002;&#x56E0;&#x6B64;&#x53EB;&#x81EA;&#x5149;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x4F9D;&#x8D56;&#xFF08;&#x4F9D;&#x6B21;&#x662F;MvBatis &#x4F9D;&#x8D56;&#x3001;Spring Security &#x4F9D;&#x8D56;&#x3001;Redis &#x4F9D;&#x8D56;&#x3001;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6C60;&#x4F9D;&#x8D56;&#x3001;&#x6570;&#x636E;&#x5E93;&#x9A71;&#x52A8;&#x4F9D;&#x8D56;&#x4EE5;&#x53CA;&#x7F13;&#x5B58;&#x4F9D;&#x8D56;&#xFF09;</p>
-<pre class="language-"><code class="lang-XML">&#xFF1C;dependency&gt;
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupid</span><span class="token punctuation">&gt;</span></span>org.mybatis.spring.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupld</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactld</span><span class="token punctuation">&gt;</span></span>&gt;mvbatis-spring-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactld</span><span class="token punctuation">&gt;</span></span>
+<pre class="language-"><code class="lang-xml"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupid</span><span class="token punctuation">&gt;</span></span>org.mybatis.spring.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupld</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactld</span><span class="token punctuation">&gt;</span></span>&gt;mvbatis-spring-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactld</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.3.2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-security<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>&#xFF0F;dependency</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-data-redis<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusions</span><span class="token punctuation">&gt;</span></span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusion</span><span class="token punctuation">&gt;</span></span>
+                     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>io.lettuce<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>lettuce-core<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+                   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusion</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusions</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>redis.clients<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>jedis<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.alibaba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>druid<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.1.10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>mysql<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>mysql-connector-java<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-cache<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
+<p>&#x4F9D;&#x8D56;&#x6DFB;&#x52A0;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5728; application.properties &#x4E2D;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x3001;Redis&#x8FDE;&#x63A5;&#x4EE5;&#x53CA;&#x7F13;&#x5B58;&#x7B49;&#x3002;</p>
+<pre class="language-"><code class="lang-yml">&#xFF03;MySQL&#x914D;&#x7F6E;
+spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/vhr
+spring.datasource.username=root
+spring.datasource.password=root
+&#xFF03;MyBatis&#x65E5;&#x5FD7;&#x914D;&#x7F6E;
+mybatis.config-location=classpath:/mybatis-config.xml
+&#xFF03;Redis&#x914D;&#x7F6E;
+spring.redis.database=0
+spring.redis.host=192.168.66.130
+spring.redis.port=6379
+spring.redis.password=123@456
+spring.redis.jedis.pool.max-active=8
+spring.redis.jedis.pool.max-idle=8
+spring.redis.jedis.pool.max-wait=-1ms
+spring.redis.jedis.pool.min-idle=0
+&#xFF03;&#x7F13;&#x5B58;&#x914D;&#x7F6E;
+spring.cache.cache-names=menus cache
+spring.cache.redis.time-to-live=1800s
+&#xFF03;&#x7AEF;&#x53E3;&#x914D;&#x7F6E;
+server.port=8082
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5B9E;&#x73B0;&#x7528;&#x6237;&#x8BA4;&#x8BC1;&#x7684;&#x914D;&#x7F6E;&#x3002;&#x7528;&#x6237;&#x8BA4;&#x8BC1;&#x4F7F;&#x7528;Spring Security &#x5B9E;&#x73B0;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x9996;&#x5148;
+&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; UserDetails&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5728;&#x4EBA;&#x4E8B;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x767B;&#x5F55;&#x64CD;&#x4F5C;&#x662F;Hr&#x767B;&#x5F55;&#xFF0C;&#x6839;&#x636E;&#x524D;&#x9762;&#x7684;Hr&#x8868;&#x521B;&#x5EFA;Hr
+&#x5B9E;&#x4F53;&#x7C7B;&#x5E76;&#x5B9E;&#x73B0; UserDetails &#x63A5;&#x53E3;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>fasterxml<span class="token punctuation">.</span>jackson<span class="token punctuation">.</span>annotation</span><span class="token punctuation">.</span><span class="token class-name">JsonIgnore</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>security<span class="token punctuation">.</span>core</span><span class="token punctuation">.</span><span class="token class-name">GrantedAuthority</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>security<span class="token punctuation">.</span>core<span class="token punctuation">.</span>authority</span><span class="token punctuation">.</span><span class="token class-name">SimpleGrantedAuthority</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>security<span class="token punctuation">.</span>core<span class="token punctuation">.</span>userdetails</span><span class="token punctuation">.</span><span class="token class-name">UserDetails</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">ArrayList</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Collection</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">List</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util</span><span class="token punctuation">.</span><span class="token class-name">Objects</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Hr</span> <span class="token keyword">implements</span> <span class="token class-name">UserDetails</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">Integer</span> id<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> phone<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> telephone<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> address<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Boolean</span> enabled<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> username<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> password<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> userface<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> remark<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Role</span><span class="token punctuation">&gt;</span></span> roles<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">equals</span><span class="token punctuation">(</span><span class="token class-name">Object</span> o<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">==</span> o<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>o <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> o<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token class-name">Hr</span> hr <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Hr</span><span class="token punctuation">)</span> o<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>username<span class="token punctuation">,</span> hr<span class="token punctuation">.</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token class-name">Objects</span><span class="token punctuation">.</span><span class="token function">hash</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Role</span><span class="token punctuation">&gt;</span></span> <span class="token function">getRoles</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> roles<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setRoles</span><span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Role</span><span class="token punctuation">&gt;</span></span> roles<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>roles <span class="token operator">=</span> roles<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Integer</span> <span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> id<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setId</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> name<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getPhone</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> phone<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setPhone</span><span class="token punctuation">(</span><span class="token class-name">String</span> phone<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>phone <span class="token operator">=</span> phone <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> phone<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getTelephone</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> telephone<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setTelephone</span><span class="token punctuation">(</span><span class="token class-name">String</span> telephone<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>telephone <span class="token operator">=</span> telephone <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> telephone<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> address<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAddress</span><span class="token punctuation">(</span><span class="token class-name">String</span> address<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>address <span class="token operator">=</span> address <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> address<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setEnabled</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> enabled<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>enabled <span class="token operator">=</span> enabled<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getUsername</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> username<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isAccountNonExpired</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isAccountNonLocked</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isCredentialsNonExpired</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isEnabled</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> enabled<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUsername</span><span class="token punctuation">(</span><span class="token class-name">String</span> username<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>username <span class="token operator">=</span> username <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> username<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token annotation punctuation">@JsonIgnore</span>
+    <span class="token keyword">public</span> <span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">GrantedAuthority</span><span class="token punctuation">&gt;</span></span> <span class="token function">getAuthorities</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">SimpleGrantedAuthority</span><span class="token punctuation">&gt;</span></span> authorities <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span>roles<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Role</span> role <span class="token operator">:</span> roles<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            authorities<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SimpleGrantedAuthority</span><span class="token punctuation">(</span>role<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> authorities<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getPassword</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> password<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setPassword</span><span class="token punctuation">(</span><span class="token class-name">String</span> password<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>password <span class="token operator">=</span> password <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> password<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getUserface</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> userface<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setUserface</span><span class="token punctuation">(</span><span class="token class-name">String</span> userface<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>userface <span class="token operator">=</span> userface <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> userface<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getRemark</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> remark<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setRemark</span><span class="token punctuation">(</span><span class="token class-name">String</span> remark<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>remark <span class="token operator">=</span> remark <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> remark<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#xFF1A;">&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#xFF1A;</h3>
+<ul>
+<li><p>&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x7EE7;&#x627F;&#x81EA; UserDetails,&#x5E76;&#x5B9E;&#x73B0;&#x8BE5;&#x63A5;&#x53E3;&#x4E2D;&#x76F8;&#x5173;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x524D;&#x7AEF;&#x7528;&#x6237;&#x5728;&#x767B;&#x5F55;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7528;&#x6237;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x4E0D;&#x5FC5;&#x8FD4;&#x56DE;&#xFF0C;&#x4F7F;&#x7528;@JsonIgnore&#x6CE8;&#x89E3;&#x5373;&#x53EF;&#x3002;</p>
+</li>
+<li><p>&#x5BF9;&#x4E8E; isAccountNonExpired&#x3001;isAccountNonLocked&#x3001;isCredentialsNonExpired,&#x7531;&#x4E8E;Hr&#x8868;&#x5E76;&#x672A;&#x8BBE;&#x8BA1;&#x76F8;&#x5173;&#x5B57;&#x6BB5;&#xFF0C;&#x56E0;&#x6B64;&#x8FD9;&#x91CC;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;true,isEnabled&#x65B9;&#x6CD5;&#x5219;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x8FD4;&#x56DE;&#x3002;</p>
+</li>
+<li><p>roles &#x5C5E;&#x6027;&#x4E2D;&#x5B58;&#x50A8;&#x4E86;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x6240;&#x6709;&#x89D2;&#x8272;&#x4FE1;&#x606F;&#xFF0C;&#x5728; getAuthorities &#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x5C06;&#x8FD9;&#x4E9B;&#x89D2;&#x8272;&#x8F6C;&#x6362;&#x4E3A;
+List<grantedauthority>&#x7684;&#x5B9E;&#x4F8B;&#x8FD4;&#x56DE;&#x3002;</grantedauthority></p>
+</li>
+</ul>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; UserDetailsService&#x5B9E;&#x4F8B;&#x7528;&#x6765;&#x67E5;&#x8BE2;&#x7528;&#x6237;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Service</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HrService</span> <span class="token keyword">implements</span> <span class="token class-name">UserDetailsService</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token class-name">HrMapper</span> hrMapper<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token class-name">HrRoleMapper</span> hrRoleMapper<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">UserDetails</span> <span class="token function">loadUserByUsername</span><span class="token punctuation">(</span><span class="token class-name">String</span> username<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">UsernameNotFoundException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Hr</span> hr <span class="token operator">=</span> hrMapper<span class="token punctuation">.</span><span class="token function">loadUserByUsername</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>hr <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">UsernameNotFoundException</span><span class="token punctuation">(</span><span class="token string">&quot;&#x7528;&#x6237;&#x540D;&#x4E0D;&#x5B58;&#x5728;!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        hr<span class="token punctuation">.</span><span class="token function">setRoles</span><span class="token punctuation">(</span>hrMapper<span class="token punctuation">.</span><span class="token function">getHrRolesById</span><span class="token punctuation">(</span>hr<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> hr<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x81EA;&#x5B9A;&#x4E49;HrService&#x5B9E;&#x73B0; UserDetailsService &#x63A5;&#x53E3;&#xFF0C;&#x5E76;&#x5B9E;&#x73B0;&#x8BE5;&#x63A5;&#x53E3;&#x4E2D;&#x7684;loadUserByUsemname&#x65B9;&#x6CD5;&#xFF0C;loadUserBy Username &#x65B9;&#x6CD5;&#x662F;&#x6839;&#x636E;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x7684;&#x6240;&#x6709;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x7528;&#x6237;&#x7684;&#x89D2;&#x8272;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x67E5;&#x5230;&#x76F8;&#x5173;&#x7528;&#x6237;&#xFF0C;&#x5C31;&#x629B;&#x51FA; UsernameNotFoundException &#x5F02;&#x5E38;&#xFF0C;&#x8868;&#x793A;&#x7528;&#x6237;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5982;&#x679C;&#x67E5;&#x5230;&#x4E86;&#xFF0C;&#x5C31;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#xFF0C;&#x7531; Spring Security &#x6846;&#x67B6;&#x5B8C;&#x6210;&#x5BC6;&#x7801;&#x7684;&#x6BD4;&#x5BF9;&#x64CD;&#x4F5C;&#x3002;
+&#x63A5;&#x4E0B;&#x6765;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x6743;&#x9650;&#xFF0C;&#x56E0;&#x6B64;&#x8FD8;&#x9700;&#x8981;&#x63D0;&#x4F9B; FilterInvocationSecurityMetadataSource &#x548C;AccessDecisionManager&#x7684;&#x5B9E;&#x4F8B;&#x3002; 
+FilterInvocationSecurityMetadataSource &#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomFilterInvocationSecurityMetadataSource</span> <span class="token keyword">implements</span> <span class="token class-name">FilterInvocationSecurityMetadataSource</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token class-name">MenuService</span> menuService<span class="token punctuation">;</span>
+    <span class="token class-name">AntPathMatcher</span> antPathMatcher <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AntPathMatcher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ConfigAttribute</span><span class="token punctuation">&gt;</span></span> <span class="token function">getAttributes</span><span class="token punctuation">(</span><span class="token class-name">Object</span> object<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IllegalArgumentException</span> <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> requestUrl <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token class-name">FilterInvocation</span><span class="token punctuation">)</span> object<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRequestUrl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Menu</span><span class="token punctuation">&gt;</span></span> menus <span class="token operator">=</span> menuService<span class="token punctuation">.</span><span class="token function">getAllMenusWithRole</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Menu</span> menu <span class="token operator">:</span> menus<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>antPathMatcher<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>menu<span class="token punctuation">.</span><span class="token function">getUrl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> requestUrl<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Role</span><span class="token punctuation">&gt;</span></span> roles <span class="token operator">=</span> menu<span class="token punctuation">.</span><span class="token function">getRoles</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> str <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span>roles<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> roles<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    str<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> roles<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">return</span> <span class="token class-name">SecurityConfig</span><span class="token punctuation">.</span><span class="token function">createList</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token class-name">SecurityConfig</span><span class="token punctuation">.</span><span class="token function">createList</span><span class="token punctuation">(</span><span class="token string">&quot;ROLE_LOGIN&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ConfigAttribute</span><span class="token punctuation">&gt;</span></span> <span class="token function">getAllConfigAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">supports</span><span class="token punctuation">(</span><span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> clazz<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#xFF1A;">&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#xFF1A;</h3>
+<ul>
+<li>&#x5728;getAttributes &#x65B9;&#x6CD5;&#x4E2D;&#x9996;&#x5148;&#x63D0;&#x53D6;&#x51FA;&#x8BF7;&#x6C42; URL,&#x6839;&#x636E;&#x8BF7;&#x6C42;URL&#x5224;&#x65AD;&#x8BE5;&#x8BF7;&#x6C42;&#x9700;&#x8981;&#x7684;&#x89D2;&#x8272;&#x4FE1;&#x606F;&#x3002;</li>
+<li>&#x901A;&#x8FC7; MenuService &#x4E2D;&#x7684; getAllMenu &#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x83B1;&#x5355;&#x8D44;&#x6E90;&#x8FDB;&#x884C;&#x6BD4;&#x5BF9;&#xFF0C;&#x8003;&#x8651;&#x5230;getAttributes&#x65B9;&#x6CD5;&#x5728;&#x6BCF;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x4E2D;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x5C06; getAllMenu &#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x7F13;&#x5B58;&#x4E0B;&#x6765;&#xFF0C;&#x4E0B;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x65F6;&#x76F4;&#x63A5;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x83B7;&#x53D6;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x6240;&#x6709;&#x672A;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x9ED8;&#x8BA4;&#x90FD;&#x662F;&#x767B;&#x5F55;&#x540E;&#x8BBF;&#x95EE;&#x3002;</li>
+</ul>
+<p>AccessDecisionManager &#x4EE3;&#x7801;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UrlAccessDecisionManager</span> <span class="token keyword">implements</span> <span class="token class-name">AccessDecisionManager</span><span class="token punctuation">{</span>
+     <span class="token annotation punctuation">@override</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">decide</span><span class="token punctuation">(</span><span class="token class-name">Authentication</span> auth<span class="token punctuation">,</span><span class="token class-name">Object</span> o<span class="token punctuation">,</span><span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ConfigAttribute</span><span class="token punctuation">&gt;</span></span>cas<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">Iterator</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ConfigAttribute</span><span class="token punctuation">&gt;</span></span>iterator<span class="token operator">=</span>cas<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">ConfigAttribute</span> ca<span class="token operator">=</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> needRole<span class="token operator">=</span>ca<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token string">&quot;ROLE LOGIN&quot;</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>needRole<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>auth <span class="token keyword">instanceof</span> <span class="token class-name">AnonymousAuthenticationroken</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">BadCredentialsException</span><span class="token punctuation">(</span><span class="token string">&quot;&#x672A;&#x767B;&#x5F55;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            &#xFF5D;<span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+       <span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token keyword">extends</span> <span class="token class-name">GrantedAuthority</span><span class="token punctuation">&gt;</span></span> authorities <span class="token operator">=</span> auth<span class="token punctuation">.</span><span class="token function">getAuthorities</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token class-name">GrantedAuthority</span> authority<span class="token operator">:</span>authorities<span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token keyword">if</span><span class="token punctuation">(</span>authority<span class="token punctuation">.</span><span class="token function">getAuthority</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>needRole<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token keyword">return</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        &#xFF5D;
+        &#xFF5D;
+
+       <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">AccessDeniedException</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6743;&#x9650;&#x4E0D;&#x8DB3;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">supports</span><span class="token punctuation">(</span><span class="token class-name">ConfigAttribute</span> configAttribute<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    &#xFF5D;
+    <span class="token annotation punctuation">@Override</span>
+     <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">supports</span><span class="token punctuation">(</span><span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span>aClass<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomUrlDecisionManager</span> <span class="token keyword">implements</span> <span class="token class-name">AccessDecisionManager</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">decide</span><span class="token punctuation">(</span><span class="token class-name">Authentication</span> authentication<span class="token punctuation">,</span> <span class="token class-name">Object</span> object<span class="token punctuation">,</span> <span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ConfigAttribute</span><span class="token punctuation">&gt;</span></span> configAttributes<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">AccessDeniedException</span><span class="token punctuation">,</span> <span class="token class-name">InsufficientAuthenticationException</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">ConfigAttribute</span> configAttribute <span class="token operator">:</span> configAttributes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">String</span> needRole <span class="token operator">=</span> configAttribute<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">&quot;ROLE_LOGIN&quot;</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>needRole<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>authentication <span class="token keyword">instanceof</span> <span class="token class-name">AnonymousAuthenticationToken</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">AccessDeniedException</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5C1A;&#x672A;&#x767B;&#x5F55;&#xFF0C;&#x8BF7;&#x767B;&#x5F55;!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+            <span class="token class-name">Collection</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span> <span class="token keyword">extends</span> <span class="token class-name">GrantedAuthority</span><span class="token punctuation">&gt;</span></span> authorities <span class="token operator">=</span> authentication<span class="token punctuation">.</span><span class="token function">getAuthorities</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">GrantedAuthority</span> authority <span class="token operator">:</span> authorities<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>authority<span class="token punctuation">.</span><span class="token function">getAuthority</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>needRole<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">AccessDeniedException</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6743;&#x9650;&#x4E0D;&#x8DB3;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x7BA1;&#x7406;&#x5458;!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">supports</span><span class="token punctuation">(</span><span class="token class-name">ConfigAttribute</span> attribute<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">supports</span><span class="token punctuation">(</span><span class="token class-name">Class</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token operator">?</span><span class="token punctuation">&gt;</span></span> clazz<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#xFF1A;">&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#xFF1A;</h3>
+<ul>
+<li>&#x5728;decide&#x65B9;&#x6CD5;&#x4E2D;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x7528;&#x6237;&#x662F;&#x5426;&#x5177;&#x5907;&#x8BF7;&#x6C42;&#x9700;&#x8981;&#x7684;&#x89D2;&#x8272;&#xFF0C;&#x82E5;&#x8BE5;&#x65B9;&#x6CD5;&#x5728;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x672A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x8BF7;&#x6C42;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#xFF1B;&#x82E5;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x8BF7;&#x6C42;&#x6743;&#x9650;&#x4E0D;&#x8DB3;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x6240;&#x9700;&#x8981;&#x7684;&#x89D2;&#x8272;&#x662F; ROLE LOGIN,&#x90A3;&#x4E48;&#x53EA;&#x9700;&#x8981;&#x5224;&#x65AD; auth &#x4E0D;&#x662F;&#x533F;&#x540D;&#x7528;&#x6237;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5373;&#x8868;&#x793A;&#x5F53;&#x524D;&#x7528;&#x6237;&#x5DF2;&#x767B;&#x5F55;&#x3002;</li>
+</ul>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; AccessDeniedHandler&#x7684;&#x5B9E;&#x4F8B;&#x6765;&#x8FD4;&#x56DE;&#x6388;&#x6743;&#x5931;&#x8D25;&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Component</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AuthenticationAccessDeniedHandler</span> <span class="token keyword">implements</span> <span class="token class-name">AccessDeniedHandler</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">handle</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> httpServletRequest<span class="token punctuation">,</span><span class="token class-name">HttpServletResponse</span> resp<span class="token punctuation">,</span><span class="token class-name">AccessDeniedException</span> e<span class="token punctuation">)</span><span class="token keyword">throws</span> <span class="token class-name">IOException</span><span class="token punctuation">{</span>
+      resp<span class="token punctuation">.</span><span class="token function">setStatus</span><span class="token punctuation">(</span><span class="token class-name">HttpServletResponse</span><span class="token punctuation">.</span><span class="token class-name">SC</span> FORBIDDEN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      resp<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">&quot;application/json;charset=UTF-8&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token class-name">Printwriter</span> out <span class="token operator">=</span> resp<span class="token punctuation">.</span><span class="token function">getwriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token class-name">RespBean</span> error<span class="token operator">=</span><span class="token class-name">RespBean</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6743;&#x9650;&#x4E0D;&#x8DB3;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x7BA1;&#x7406;&#x5458;!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      out<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token function">objectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">writeValueAsString</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      out<span class="token punctuation">.</span><span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      out<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5F53;&#x6388;&#x6743;&#x5931;&#x8D25;&#x65F6;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x8FD4;&#x56DE;&#x6388;&#x6743;&#x5931;&#x8D25;&#x4FE1;&#x606F;&#x3002;
+&#x5F53;&#x6240;&#x6709;&#x5DE5;&#x4F5C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x914D;&#x7F6E;Spring Security &#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">WebSecurityConfig</span> <span class="token keyword">extends</span> <span class="token class-name">WebSecurityConfigurerAdapter</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token class-name">HrService</span> hrService<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token class-name">CustomFilterInvocationSecurityMetadataSource</span> customFilterInvocationSecurityMetadataSource<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token class-name">UrlAccessDecisionManager</span> urlAccessDecisionManager<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token class-name">AuthenticationAccessDeniedHandler</span> deniedHandler<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">configure</span><span class="token punctuation">(</span><span class="token class-name">WebSecurity</span> web<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span><span class="token punctuation">{</span>  
+     web<span class="token punctuation">.</span><span class="token function">ignoring</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">antMatchers</span><span class="token punctuation">(</span><span class="token string">&quot;/index.html&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;/static/**&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;/login_p&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    &#xFF5D;
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">configure</span><span class="token punctuation">(</span><span class="token class-name">HttpSecurity</span> http<span class="token punctuation">)</span><span class="token keyword">throws</span> <span class="token class-name">Exception</span>
+    http<span class="token punctuation">.</span><span class="token function">authorizeRequests</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">withobjectPostProcessor</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">AObectPostProcessor</span><span class="token punctuation">)</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FiltersecurityInterceptor</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> &#xFF1C;o <span class="token keyword">extends</span> <span class="token class-name">FilterSecurityInterceptor</span><span class="token operator">&gt;</span><span class="token class-name">O</span> <span class="token function">postProcess</span><span class="token punctuation">(</span><span class="token class-name">O</span> o<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    o<span class="token punctuation">.</span><span class="token function">setSecurityMetadataSource</span><span class="token punctuation">(</span>metadataSource<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    o<span class="token punctuation">.</span><span class="token function">setAccessDecisionManager</span><span class="token punctuation">(</span>urlAccessDecisionManager<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> o<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+&#xFF5D;<span class="token punctuation">}</span>
+   o<span class="token punctuation">.</span><span class="token function">and</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">formLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">loginPage</span><span class="token punctuation">(</span><span class="token string">&quot;/login p&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">loginProcessingUrl</span><span class="token punctuation">(</span><span class="token string">&quot;/login&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">usernameParameter</span><span class="token punctuation">(</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">passwordParameter</span><span class="token punctuation">(</span><span class="token string">&quot;password&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">failureHandler</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">AuthenticationFailureHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onAuthenticationFailure</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> req<span class="token punctuation">,</span><span class="token class-name">HttpServletResponse</span> resp<span class="token punctuation">,</span><span class="token class-name">AuthenticationException</span> e<span class="token punctuation">)</span><span class="token keyword">throws</span> <span class="token class-name">IOException</span><span class="token punctuation">{</span>
+    wblugsnresp<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">&quot;application/json;charset=utf-8&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">RespBean</span> respBean<span class="token operator">=</span><span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>e <span class="token keyword">instanceof</span> <span class="token class-name">BadCredentialsException</span> <span class="token operator">||</span> e <span class="token keyword">instanceof</span> <span class="token class-name">UsernameNotFoundException</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      respBean<span class="token operator">=</span><span class="token class-name">RespBean</span><span class="token punctuation">.</span>error&#xFF08;<span class="token string">&quot;&#x8D26;&#x6237;&#x540D;&#x6216;&#x8005;&#x5BC6;&#x7801;&#x8F93;&#x5165;&#x9519;&#x8BEF;&#xFF01;&quot;</span>&#xFF09;<span class="token punctuation">;</span>
+     &#xFF5D;<span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>e <span class="token keyword">instanceof</span> <span class="token class-name">LockedException</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      respBean<span class="token operator">=</span><span class="token class-name">RespBean</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;&#x8D26;&#x6237;&#x88AB;&#x9501;&#x5B9A;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x7BA1;&#x7406;&#x5458;&#xFF01;&quot;</span>&#xFF09;<span class="token punctuation">;</span>
+    &#xFF5D;<span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>e <span class="token keyword">instanceof</span> <span class="token class-name">CredentialsExpiredException</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      respBean<span class="token operator">=</span><span class="token class-name">RespBean</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>&quot;&#x5BC6;&#x7801;&#x8FC7;&#x671F;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x7BA1;&#x7406;&#x5458;&#xFF01;&#x201D;&#xFF09;<span class="token punctuation">;</span>
+    &#xFF5D;<span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>e <span class="token keyword">instanceof</span> <span class="token class-name">AccountExpiredException</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+     respBean<span class="token operator">=</span><span class="token class-name">RespBean</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>&#x201C;&#x8D26;&#x6237;&#x8FC7;&#x671F;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x7BA1;&#x7406;&#x5458;&#xFF01;&quot;&#xFF09;<span class="token punctuation">;</span>
+    &#xFF5D;<span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>e <span class="token keyword">instanceof</span> <span class="token class-name">DisabledException</span><span class="token punctuation">)</span><span class="token punctuation">{</span>o
+     respBean<span class="token operator">=</span><span class="token class-name">RespBean</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>&#x201D;&#x8D26;&#x6237;&#x88AB;&#x7968;&#x7528;&#xFF0C;&#x8BF7;&#x8054;&#x7CFB;&#x7BA1;&#x7406;&#x5458;&#xFF01;&#x201D;&#xFF09;<span class="token punctuation">;</span>
+    &#xFF5D;<span class="token keyword">else</span> <span class="token punctuation">{</span>
+     respBean<span class="token operator">=</span><span class="token class-name">RespBean</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>&#x201C;&#x767B;&#x5F55;&#x5931;&#x8D25;&quot;<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    &#xFF5D;
+    resp<span class="token punctuation">.</span><span class="token function">setStatus</span><span class="token punctuation">(</span><span class="token number">401</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">ObjectMapper</span> om<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Printwriter</span> out<span class="token operator">=</span>resp<span class="token punctuation">.</span><span class="token function">getwriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span>
+    out<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>om<span class="token punctuation">.</span><span class="token function">writeValueAsString</span><span class="token punctuation">(</span>respBean<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    out<span class="token punctuation">.</span><span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>eHsdeeoAnons
+    out<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">successHandler</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">AuthenticationSuccessHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token annotation punctuation">@Override</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onAuthenticationSuccess</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> req<span class="token punctuation">,</span><span class="token class-name">HttpServletResponse</span> resp<span class="token punctuation">,</span><span class="token class-name">Authentication</span> auth<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span><span class="token punctuation">{</span>
+   resp<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">&quot;application/json;charset=utf-8&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token class-name">RespBean</span> respBean<span class="token operator">=</span><span class="token class-name">RespBean</span><span class="token punctuation">.</span><span class="token function">ok</span><span class="token punctuation">(</span>&quot;&#x767B;&#x5F55;&#x6210;&#x529F;&#xFF01;&#x201D;&#xFF0C;<span class="token class-name">HrUtils</span><span class="token punctuation">.</span><span class="token function">getCurrentHr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token class-name">ObjectMapper</span> om<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ObjectMapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token class-name">PrintWriter</span> out<span class="token operator">=</span>resp<span class="token punctuation">.</span><span class="token function">getwriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   out<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>om<span class="token punctuation">.</span><span class="token function">writeValueAsString</span><span class="token punctuation">(</span>respBean<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>denoddiw
+   out<span class="token punctuation">.</span><span class="token function">flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   out<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+&#xFF5D;<span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">permitA1l</span><span class="token punctuation">(</span><span class="token punctuation">)</span>oteooAltu<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">and</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">logout</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">permitA1l</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">land</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">csrf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">disable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">exceptionHandling</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">accessDeniedHandler</span><span class="token punctuation">(</span>deniedHandler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   &#xFF5D;
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#xFF1A;">&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#xFF1A;</h2>
+<ul>
+<li><p>&#x9996;&#x5148;&#x901A;&#x8FC7;@EnableGlobalMethodSecurity &#x6CE8;&#x89E3;&#x5F00;&#x542F;&#x57FA;&#x4E8E;&#x6CE8;&#x89E3;&#x7684;&#x5B89;&#x5168;&#x914D;&#x7F6E;&#xFF0C;&#x542F;&#x7528;@PreAuthorize&#x548C;@PostAuthorize&#x4E24;&#x4E2A;&#x6CE8;&#x89E3;&#x3002;</p>
+</li>
+<li><p>&#x5728;&#x914D;&#x7F6E;&#x7C7B;&#x4E2D;&#x6CE8;&#x5165;&#x4E4B;&#x524D;&#x521B;&#x5EFA;&#x7684;4&#x4E2A;Bean,&#x5728; AuthenticationManagerBuilder &#x4E2D;&#x914D;&#x7F6E;userDetailsService&#x548C;passwordEncoder.</p>
+</li>
+<li><p>&#x5728; WebSecurity &#x4E2D;&#x914D;&#x7F6E;&#x9700;&#x8981;&#x5FFD;&#x7565;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+</li>
+<li><p>&#x5728; HttpSecurity &#x4E2D;&#x914D;&#x7F6E;&#x62E6;&#x622A;&#x89C4;&#x5219;&#x3001;&#x8868;&#x5355;&#x767B;&#x5F55;&#x3001;&#x767B;&#x5F55;&#x6210;&#x529F;&#x6216;&#x5931;&#x8D25;&#x7684;&#x54CD;&#x5E94;&#x7B49;&#x3002;</p>
+</li>
+<li><p>&#x6700;&#x540E;&#x901A;&#x8FC7;accessDeniedHandler&#x914D;&#x7F6E;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x3002;</p>
+</li>
+</ul>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x524D;&#x6587;&#x63D0;&#x5230;MenuService &#x4E2D;&#x7684; getAllMenu &#x65B9;&#x6CD5;&#x5728;&#x6BCF;&#x6B21;&#x8BF7;&#x6C42;&#x65F6;&#x90FD;&#x9700;&#x8981;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6548;&#x7387;&#x6781;&#x4F4E;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x5C06;&#x8BE5;&#x6570;&#x636E;&#x7F13;&#x5B58;&#x4E0B;&#x6765;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Service</span>
+<span class="token annotation punctuation">@Transactional</span>
+<span class="token annotation punctuation">@CacheConfig</span><span class="token punctuation">(</span>cacheNames<span class="token operator">=</span><span class="token string">&quot;menus_cache&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MenuService</span><span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token class-name">MenuMapper</span> menuMapper<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Cacheable</span><span class="token punctuation">(</span>key<span class="token operator">=</span><span class="token string">&quot;&#xFF03;root.methodName&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Menu</span><span class="token punctuation">&gt;</span></span><span class="token function">getAllMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token keyword">return</span> menuMapper<span class="token punctuation">.</span><span class="token function">getAllMenu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h2>
+<blockquote>
+<p>&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x540D;&#x4F5C;&#x4E3A;&#x7F13;&#x5B58;&#x7684;key,&#x53E6;&#x5916;&#x9700;&#x8981;&#x5728;&#x9879;&#x76EE;&#x542F;&#x52A8;&#x7C7B;&#x6DFB;&#x52A0;@EnableCashing&#x6CE8;&#x89E3;&#x5F00;&#x542F;&#x7F13;&#x5B58;&#x3002;</p>
+</blockquote>
+<p>PostMan&#x6D4B;&#x8BD5;&#xFF08;&#x5F85;&#x5199;&#xFF09;</p>
+<h2 id="&#x524D;&#x7AEF;&#x5B9E;&#x73B0;">&#x524D;&#x7AEF;&#x5B9E;&#x73B0;</h2>
+<h3 id="&#x5F15;&#x5165;element&#x548C;axios">&#x5F15;&#x5165;Element&#x548C;Axios</h3>
+<p>&#x524D;&#x7AEF;UI&#x4F7F;&#x7528;Element&#xFF0C;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x5219;&#x4F7F;&#x7528;Axios&#xFF0C;
+&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>npm i element-ui -S
+npm i axios -S
+</code></pre><p>&#x4F9D;&#x8D56;&#x6DFB;&#x52A0;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5728;main.js&#x4E2D;&#x5F15;&#x5165;Element
+&#x4EE3;&#x7801;&#x5982;&#x4E0B;</p>
+<pre class="language-"><code>import ElementUI from &apos;element-ui&apos;
+import &apos;element-ui/lib/theme-chalk/index.css&apos;;
+Vue.use(ElementUI)
+</code></pre><p>&#x5F15;&#x5165;Element &#x4E4B;&#x540E;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x76F8;&#x5173;&#x7EC4;&#x4EF6;&#x4E86;&#x3002;
+&#x5BF9;&#x4E8E;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF0C;&#x7531;&#x4E8E;&#x5728;&#x6BCF;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x65F6;&#x90FD;&#x9700;&#x8981;&#x5224;&#x65AD;&#x5404;&#x79CD;&#x5F02;&#x5E38;&#x60C5;&#x51B5;&#xFF0C;&#x7136;&#x540E;&#x63D0;&#x793A;&#x7528;&#x6237;&#xFF0C;&#x4F8B;&#x5982;&#x8BF7;&#x6C42;&#x662F;&#x5426;&#x6210;&#x529F;&#x3001;&#x5931;&#x8D25;&#x7684;&#x539F;&#x56E0;&#x7B49;&#xFF0C;&#x8003;&#x8651;&#x5230;&#x8FD9;&#x4E9B;&#x5224;&#x65AD;&#x57FA;&#x672C;&#x4E0A;&#x90FD;&#x4F7F;&#x7528;&#x91CD;&#x590D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x5C06;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x5C01;&#x88C5;&#xFF0C;&#x505A;&#x6210;Vue&#x7684;&#x63D2;&#x4EF6;&#x65B9;&#x4FBF;&#x4F7F;&#x7528;&#x3002;&#x7531;&#x4E8E;&#x5C01;&#x88C5;&#x7684;&#x4EE3;&#x7801;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x8D34;&#x51FA;&#x6765;&#x4E86;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x5728;GitHub &#x4E0A;&#x67E5;&#x770B;&#xFF0C;&#x5730;&#x5740;&#x4E3A; <a href="https://github.com/lenve/vhr/blob/master/vuehr/src/utils/api.js" target="_blank">app.js</a>&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5728;main.js&#x4E2D;&#x5BFC;&#x5165;&#x5C01;&#x88C5;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x914D;&#x7F6E;&#x4E3A;Vue&#x7684;prototype,&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>import {postRequest} from &quot;./utils/api&quot;;
+import {postKeyValueRequest} from &quot;./utils/api&quot;;
+import {putRequest} from &quot;./utils/api&quot;;
+import {deleteRequest} from &quot;./utils/api&quot;;
+import {getRequest} from &quot;./utils/api&quot;;
+import {initMenu} from &quot;./utils/menus&quot;;
+import &apos;font-awesome/css/font-awesome.min.css&apos;
+Vue.prototype.postRequest = postRequest;
+Vue.prototype.postKeyValueRequest = postKeyValueRequest;
+Vue.prototype.putRequest = putRequest;
+Vue.prototype.deleteRequest = deleteRequest;
+Vue.prototype.getRequest = getRequest;
+</code></pre><p>&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;this.XXX&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF0C;&#x4F8B;&#x5982;&#x8981;&#x6267;&#x884C;&#x767B;&#x5F55;&#x8BF7;&#x6C42;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;this.postRequest(url,param)&#x6267;&#x884C;&#x3002;</p>
+<h3 id="&#x5F00;&#x53D1;-login-&#x9875;&#x9762;">&#x5F00;&#x53D1; Login &#x9875;&#x9762;</h3>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x5728; components &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; Login.vue &#x9875;&#x9762;&#x8FDB;&#x884C;&#x767B;&#x5F55;&#x9875;&#x9762;&#x5F00;&#x53D1;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form</span>
+                <span class="token attr-name">:rules</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>rules<span class="token punctuation">&quot;</span></span>
+                <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loginForm<span class="token punctuation">&quot;</span></span>
+                <span class="token attr-name">v-loading</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loading<span class="token punctuation">&quot;</span></span>
+                <span class="token attr-name">element-loading-text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>&#x6B63;&#x5728;&#x767B;&#x5F55;...<span class="token punctuation">&quot;</span></span>
+                <span class="token attr-name">element-loading-spinner</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>el-icon-loading<span class="token punctuation">&quot;</span></span>
+                <span class="token attr-name">element-loading-background</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>rgba(0, 0, 0, 0.8)<span class="token punctuation">&quot;</span></span>
+                <span class="token attr-name">:model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loginForm<span class="token punctuation">&quot;</span></span>
+                <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loginContainer<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loginTitle<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x7CFB;&#x7EDF;&#x767B;&#x5F55;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span> <span class="token attr-name">prop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>username<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>normal<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loginForm.username<span class="token punctuation">&quot;</span></span> <span class="token attr-name">auto-complete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>off<span class="token punctuation">&quot;</span></span>
+                          <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>&#x8BF7;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span> <span class="token attr-name">prop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>normal<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loginForm.password<span class="token punctuation">&quot;</span></span> <span class="token attr-name">auto-complete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>off<span class="token punctuation">&quot;</span></span>
+                          <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>&#x8BF7;&#x8F93;&#x5165;&#x5BC6;&#x7801;<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span> <span class="token attr-name">prop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>code<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>normal<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loginForm.code<span class="token punctuation">&quot;</span></span> <span class="token attr-name">auto-complete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>off<span class="token punctuation">&quot;</span></span>
+                          <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>&#x70B9;&#x51FB;&#x56FE;&#x7247;&#x66F4;&#x6362;&#x9A8C;&#x8BC1;&#x7801;<span class="token punctuation">&quot;</span></span> <span class="token attr-name">@keydown.enter.native</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>submitLogin<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span> 250px</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>vcUrl<span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>updateVerifyCode<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">cursor</span><span class="token punctuation">:</span> pointer</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-checkbox</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>normal<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>loginRemember<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>checked<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-checkbox</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-button</span> <span class="token attr-name">size</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>normal<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>primary<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>submitLogin<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x767B;&#x5F55;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-button</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span>
+
+    export default {
+        name: &quot;Login&quot;,
+        data() {
+            return {
+                loading: false,
+                vcUrl: &apos;/verifyCode?time=&apos;+new Date(),
+                loginForm: {
+                    username: &apos;admin&apos;,
+                    password: &apos;123&apos;,
+                    code:&apos;&apos;
+                },
+                checked: true,
+                rules: {
+                    username: [{required: true, message: &apos;&#x8BF7;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&apos;, trigger: &apos;blur&apos;}],
+                    password: [{required: true, message: &apos;&#x8BF7;&#x8F93;&#x5165;&#x5BC6;&#x7801;&apos;, trigger: &apos;blur&apos;}],
+                    code: [{required: true, message: &apos;&#x8BF7;&#x8F93;&#x5165;&#x9A8C;&#x8BC1;&#x7801;&apos;, trigger: &apos;blur&apos;}]
+                }
+            }
+        },
+        methods: {
+            updateVerifyCode() {
+                this.vcUrl = &apos;/verifyCode?time=&apos;+new Date();
+            },
+            submitLogin() {
+                this.$refs.loginForm.validate((valid) =&gt; {
+                    if (valid) {
+                        this.loading = true;
+                        this.postRequest(&apos;/doLogin&apos;, this.loginForm).then(resp =&gt; {
+                            this.loading = false;
+                            if (resp) {
+                                this.$store.commit(&apos;INIT_CURRENTHR&apos;, resp.obj);
+                                window.sessionStorage.setItem(&quot;user&quot;, JSON.stringify(resp.obj));
+                                let path = this.$route.query.redirect;
+                                this.$router.replace((path == &apos;/&apos; || path == undefined) ? &apos;/home&apos; : path);
+                            }else{
+                                this.vcUrl = &apos;/verifyCode?time=&apos;+new Date();
+                            }
+                        })
+                    } else {
+                        return false;
+                    }
+                });
+            }
+        }
+    }
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">.loginContainer</span> <span class="token punctuation">{</span>
+        <span class="token property">border-radius</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+        <span class="token property">background-clip</span><span class="token punctuation">:</span> padding-box<span class="token punctuation">;</span>
+        <span class="token property">margin</span><span class="token punctuation">:</span> 180px auto<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 350px<span class="token punctuation">;</span>
+        <span class="token property">padding</span><span class="token punctuation">:</span> 15px 35px 15px 35px<span class="token punctuation">;</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+        <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #eaeaea<span class="token punctuation">;</span>
+        <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 0 25px #cac6c6<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.loginTitle</span> <span class="token punctuation">{</span>
+        <span class="token property">margin</span><span class="token punctuation">:</span> 15px auto 20px auto<span class="token punctuation">;</span>
+        <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> #505458<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.loginRemember</span> <span class="token punctuation">{</span>
+        <span class="token property">text-align</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+        <span class="token property">margin</span><span class="token punctuation">:</span> 0px 0px 15px 0px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">.el-form-item__content</span><span class="token punctuation">{</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+        <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>&#x914D;&#x7F6E;&#x8DEF;&#x7531;</p>
+<pre class="language-"><code>import Vue from &apos;vue&apos;
+import Router from &apos;vue-router&apos;
+import Login from &apos;./views/Login.vue&apos;
+import Home from &apos;./views/Home.vue&apos;
+import FriendChat from &apos;./views/chat/FriendChat.vue&apos;
+import HrInfo from &apos;./views/HrInfo.vue&apos;
+
+Vue.use(Router)
+
+export default new Router({
+    routes: [
+        {
+            path: &apos;/&apos;,
+            name: &apos;Login&apos;,
+            component: Login,
+            hidden: true
+        }, {
+            path: &apos;/home&apos;,
+            name: &apos;Home&apos;,
+            component: Home,
+            hidden: true,
+            meta: {
+                roles: [&apos;admin&apos;, &apos;user&apos;]
+            },
+            children: [
+                {
+                    path: &apos;/chat&apos;,
+                    name: &apos;&#x5728;&#x7EBF;&#x804A;&#x5929;&apos;,
+                    component: FriendChat,
+                    hidden: true
+                }, {
+                    path: &apos;/hrinfo&apos;,
+                    name: &apos;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&apos;,
+                    component: HrInfo,
+                    hidden: true
+                }
+            ]
+        }, {
+            path: &apos;*&apos;,
+            redirect: &apos;/home&apos;
+        }
+    ]
+})
+</code></pre><p>&#x4FEE;&#x6539;&#x53BB;&#x9664;&#x9ED8;&#x8BA4;VueLogo</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span><span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h4 id="&#x914D;&#x7F6E;&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;">&#x914D;&#x7F6E;&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;</h4>
+<p>&#x4FEE;&#x6539;config&#x7684;index.js&#x6587;&#x4EF6;&#xFF0C;&#x4FEE;&#x6539;proxyTable&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>```
+#### &#x542F;&#x52A8;&#x524D;&#x7AEF;&#x9879;&#x76EE;
+</code></pre><p> npm run dev
+ ```</p>
+<h3 id="&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x7528;&#x6237;&#x83DC;&#x5355;">&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x7528;&#x6237;&#x83DC;&#x5355;</h3>
 
 </div>
 
@@ -2871,7 +3757,7 @@ Generated vuehr&quot;.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JavaWeb实战项目","level":"1.8","depth":1,"next":{"title":"微人事项目实战","level":"1.8.1","depth":2,"anchor":"#2","path":"java4.md","ref":"java4.md#2","articles":[]},"previous":{"title":"项目构建","level":"1.7.2","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"plugins":["simple-mind-map","new-flowchart","mermaid-gb3@2.1.0","hide-element","-lunr","-search","search-plus@^0.0.11","back-to-top-button","openwrite","code","prism","-highlight","-livereload","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"new-flowchart":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"openwrite":{"blogId":"18972-1576749538667-677","name":"谦谦君子","qrcode":"https://image.lichongbing.com/qrcode_for_gh_29bad7d68f3a_258.jpg","keyword":"更多"},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{"height":"750px","wight":"1000px"},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Java笔记Blog","links":{"sidebar":{"blog":"https://blog.lichongbing.com/"}},"gitbook":"3.2.3","description":"gitbook-plugin-simple-mind-map examples"},"file":{"path":"java4.md","mtime":"2020-06-22T15:17:16.925Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T14:43:00.719Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JavaWeb实战项目","level":"1.8","depth":1,"next":{"title":"微人事项目实战","level":"1.8.1","depth":2,"anchor":"#2","path":"java4.md","ref":"java4.md#2","articles":[]},"previous":{"title":"项目构建","level":"1.7.2","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"plugins":["simple-mind-map","new-flowchart","mermaid-gb3@2.1.0","hide-element","-lunr","-search","search-plus@^0.0.11","back-to-top-button","openwrite","code","prism","-highlight","-livereload","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"new-flowchart":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"openwrite":{"blogId":"18972-1576749538667-677","name":"谦谦君子","qrcode":"https://image.lichongbing.com/qrcode_for_gh_29bad7d68f3a_258.jpg","keyword":"更多"},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"simple-mind-map":{"autoFit":true,"linkShape":"diagonal","preset":"colorful","style":{"height":"750px","wight":"1000px"},"type":"markdown"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Java笔记Blog","links":{"sidebar":{"blog":"https://blog.lichongbing.com/"}},"gitbook":"3.2.3","description":"gitbook-plugin-simple-mind-map examples"},"file":{"path":"java4.md","mtime":"2020-06-23T08:08:18.995Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-23T01:58:57.864Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

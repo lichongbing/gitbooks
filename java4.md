@@ -76,7 +76,7 @@ npm run dev
 Project name vuehr
 Project description A Vue.js project
 Author 江南一点雨
-＜wangsong0210@gmail.com
+<wangsong0210@gmail.com
 Vue build standalone
 Install vue-router?ies
 Use ESLint to lint your code?No
@@ -115,10 +115,10 @@ Generated vuehr".
 后端使用 Spring Boot 创建一个 Spring Boot工程，添加 spring-boot-starter-web 依赖即可：
 
 ```xml
-＜dependency> 
-＜groupId>org.springframework.boot</groupId>
-＜artifactId>spring-boot-starter-web</artifactId>
-＜／dependency>
+<dependency> 
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-starter-web</artifactId>
+<／dependency>
 ```
 当然，后端所需的依赖不止spring-boot-starter-web,在后文功能不断完善的过程中，再继续鼎具他依赖。另外，后端项目所需的Redis 配置、邮件发送配置、POI配置、WebSocket配置等将在涉及相关功能时向读者介绍。
 
@@ -412,29 +412,722 @@ mail_send_log表（邮件发送日志表）
 ### 后端接口实现
 
 后端权限认证采用 Spring Security 实现（本小节中大量知识点与第10章的内容相关，需要读练享握第10章的内容），数据库访问使用MyBatis,同时使用Redis实现认证信息缓存。因此叫自光添加如下依赖（依次是MvBatis 依赖、Spring Security 依赖、Redis 依赖、数据库连接池依赖、数据库驱动依赖以及缓存依赖）
-```XML
-＜dependency>
-<groupid>org.mybatis.spring.boot</groupld>
-<artifactld>>mvbatis-spring-boot-starter</artifactld>
+```xml
+ <dependency>
+            <groupid>org.mybatis.spring.boot</groupld>
+            <artifactld>>mvbatis-spring-boot-starter</artifactld>
+            <version>1.3.2</version>
+</dependency>
+<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <／dependency>
+<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <exclusions>
+                  <exclusion>
+                     <groupId>io.lettuce</groupId>
+                     <artifactId>lettuce-core</artifactId>
+                   </exclusion>
+            </exclusions>
+</dependency>
+<dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            </dependency>
+<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.10</version>
+</dependency>
+            <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+</dependency>
+            <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+</dependency>
+
 ```
 
 
+依赖添加完成后，接下来在 application.properties 中配置数据库连接、Redis连接以及缓存等。
+
+```yml
+＃MySQL配置
+spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/vhr
+spring.datasource.username=root
+spring.datasource.password=root
+＃MyBatis日志配置
+mybatis.config-location=classpath:/mybatis-config.xml
+＃Redis配置
+spring.redis.database=0
+spring.redis.host=192.168.66.130
+spring.redis.port=6379
+spring.redis.password=123@456
+spring.redis.jedis.pool.max-active=8
+spring.redis.jedis.pool.max-idle=8
+spring.redis.jedis.pool.max-wait=-1ms
+spring.redis.jedis.pool.min-idle=0
+＃缓存配置
+spring.cache.cache-names=menus cache
+spring.cache.redis.time-to-live=1800s
+＃端口配置
+server.port=8082
+```
+配置完成后，接下来实现用户认证的配置。用户认证使用Spring Security 实现，因此需要首先
+提供一个 UserDetails的实例，在人事管理系统中，登录操作是Hr登录，根据前面的Hr表创建Hr
+实体类并实现 UserDetails 接口，代码如下：
+```java
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Objects;
+
+public class Hr implements UserDetails {
+    private Integer id;
+
+    private String name;
+
+    private String phone;
+
+    private String telephone;
+
+    private String address;
+
+    private Boolean enabled;
+
+    private String username;
+
+    private String password;
+
+    private String userface;
+
+    private String remark;
+    private List<Role> roles;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Hr hr = (Hr) o;
+        return Objects.equals(username, hr.username);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(username);
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone == null ? null : phone.trim();
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone == null ? null : telephone.trim();
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address == null ? null : address.trim();
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
+    }
+
+    @Override
+    @JsonIgnore
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        List<SimpleGrantedAuthority> authorities = new ArrayList<>(roles.size());
+        for (Role role : roles) {
+            authorities.add(new SimpleGrantedAuthority(role.getName()));
+        }
+        return authorities;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
+    }
+
+    public String getUserface() {
+        return userface;
+    }
+
+    public void setUserface(String userface) {
+        this.userface = userface == null ? null : userface.trim();
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark == null ? null : remark.trim();
+    }
+}
+
+```
+
+### 代码解释：
+
+* 自定义类继承自 UserDetails,并实现该接口中相关的方法。前端用户在登录成功后，需要获取当前登录用户的信息，对于一些敏感信息不必返回，使用@JsonIgnore注解即可。
+
+* 对于 isAccountNonExpired、isAccountNonLocked、isCredentialsNonExpired,由于Hr表并未设计相关字段，因此这里直接返回true,isEnabled方法则根据实际情况返回。
+
+* roles 属性中存储了当前用户的所有角色信息，在 getAuthorities 方法中，将这些角色转换为
+List<GrantedAuthority>的实例返回。
+
+接下来提供一个 UserDetailsService实例用来查询用户，代码如下：
+
+```java
+@Service
+public class HrService implements UserDetailsService {
+    @Autowired
+    HrMapper hrMapper;
+    @Autowired
+    HrRoleMapper hrRoleMapper;
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        Hr hr = hrMapper.loadUserByUsername(username);
+        if (hr == null) {
+            throw new UsernameNotFoundException("用户名不存在!");
+        }
+        hr.setRoles(hrMapper.getHrRolesById(hr.getId()));
+        return hr;
+    }
+}
+```
+
+自定义HrService实现 UserDetailsService 接口，并实现该接口中的loadUserByUsemname方法，loadUserBy Username 方法是根据用户名查询用户的所有信息，包括用户的角色，如果没有查到相关用户，就抛出 UsernameNotFoundException 异常，表示用户不存在，如果查到了，就直接返回，由 Spring Security 框架完成密码的比对操作。
+接下来需要实现动态配置权限，因此还需要提供 FilterInvocationSecurityMetadataSource 和AccessDecisionManager的实例。 
+FilterInvocationSecurityMetadataSource 代码如下：
+```java
+@Component
+public class CustomFilterInvocationSecurityMetadataSource implements FilterInvocationSecurityMetadataSource {
+    @Autowired
+    MenuService menuService;
+    AntPathMatcher antPathMatcher = new AntPathMatcher();
+    @Override
+    public Collection<ConfigAttribute> getAttributes(Object object) throws IllegalArgumentException {
+        String requestUrl = ((FilterInvocation) object).getRequestUrl();
+        List<Menu> menus = menuService.getAllMenusWithRole();
+        for (Menu menu : menus) {
+            if (antPathMatcher.match(menu.getUrl(), requestUrl)) {
+                List<Role> roles = menu.getRoles();
+                String[] str = new String[roles.size()];
+                for (int i = 0; i < roles.size(); i++) {
+                    str[i] = roles.get(i).getName();
+                }
+                return SecurityConfig.createList(str);
+            }
+        }
+        return SecurityConfig.createList("ROLE_LOGIN");
+    }
+
+    @Override
+    public Collection<ConfigAttribute> getAllConfigAttributes() {
+        return null;
+    }
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return true;
+    }
+}
+```
+### 代码解释：
 
 
+* 在getAttributes 方法中首先提取出请求 URL,根据请求URL判断该请求需要的角色信息。
+* 通过 MenuService 中的 getAllMenu 方法获取所有的莱单资源进行比对，考虑到getAttributes方法在每一次请求中都会调用，因此可以将 getAllMenu 方法的返回值缓存下来，下一次请求时直接从缓存中获取。
+* 对于所有未匹配成功的请求，默认都是登录后访问。
+
+AccessDecisionManager 代码如：
+```java
+@Component
+public class UrlAccessDecisionManager implements AccessDecisionManager{
+     @override
+     public void decide(Authentication auth,Object o,Collection<ConfigAttribute>cas){
+        Iterator<ConfigAttribute>iterator=cas.iterator();
+        while (iterator.hasNext()){
+        ConfigAttribute ca=iterator.next();
+        String needRole=ca.getAttribute();
+        if("ROLE LOGIN".equals(needRole)){
+            if (auth instanceof AnonymousAuthenticationroken){
+                throw new BadCredentialsException("未登录");
+            ｝else {
+            return;
+            }
+        }
+       Collection<?extends GrantedAuthority> authorities = auth.getAuthorities();
+       for(GrantedAuthority authority:authorities){
+          if(authority.getAuthority().equals(needRole)){
+          return;
+          }
+        ｝
+        ｝
+
+       throw new AccessDeniedException("权限不足");
+    }
+    @Override
+    public boolean supports(ConfigAttribute configAttribute){
+    return true;
+    ｝
+    @Override
+     public boolean supports(Class<?>aClass){
+    return true;
+    }
+}
+```
 
 
+```java
+@Component
+public class CustomUrlDecisionManager implements AccessDecisionManager {
+    @Override
+    public void decide(Authentication authentication, Object object, Collection<ConfigAttribute> configAttributes) throws AccessDeniedException, InsufficientAuthenticationException {
+        for (ConfigAttribute configAttribute : configAttributes) {
+            String needRole = configAttribute.getAttribute();
+            if ("ROLE_LOGIN".equals(needRole)) {
+                if (authentication instanceof AnonymousAuthenticationToken) {
+                    throw new AccessDeniedException("尚未登录，请登录!");
+                }else {
+                    return;
+                }
+            }
+            Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
+            for (GrantedAuthority authority : authorities) {
+                if (authority.getAuthority().equals(needRole)) {
+                    return;
+                }
+            }
+        }
+        throw new AccessDeniedException("权限不足，请联系管理员!");
+    }
 
+    @Override
+    public boolean supports(ConfigAttribute attribute) {
+        return true;
+    }
 
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return true;
+    }
+}
+```
+### 代码解释：
+* 在decide方法中判断当前用户是否具备请求需要的角色，若该方法在执行过程中未抛出异常，则说明请求可以通过；若抛出异常，则说明请求权限不足。
+* 如果所需要的角色是 ROLE LOGIN,那么只需要判断 auth 不是匿名用户的实例，即表示当前用户已登录。
 
+接下来提供一个 AccessDeniedHandler的实例来返回授权失败的信息：
 
+```java
+@Component
+public class AuthenticationAccessDeniedHandler implements AccessDeniedHandler{
+    @Override
+    public void handle(HttpServletRequest httpServletRequest,HttpServletResponse resp,AccessDeniedException e)throws IOException{
+      resp.setStatus(HttpServletResponse.SC FORBIDDEN);
+      resp.setContentType("application/json;charset=UTF-8");
+      Printwriter out = resp.getwriter();
+      RespBean error=RespBean.error("权限不足，请联系管理员!");
+      out.write(new objectMapper().writeValueAsString(error));
+      out.flush();
+      out.close();
+    }
+}
+```
+当授权失败时，在这里返回授权失败信息。
+当所有工作完成后，接下来配置Spring Security 代码如下：
 
+```java
+@Configuration
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    @Autowired
+    HrService hrService;
+    @Autowired
+    CustomFilterInvocationSecurityMetadataSource customFilterInvocationSecurityMetadataSource;
+    @Autowired
+    UrlAccessDecisionManager urlAccessDecisionManager;
+    @Autowired
+    AuthenticationAccessDeniedHandler deniedHandler;
+    @override
+    public void configure(WebSecurity web) throws Exception{  
+     web.ignoring().antMatchers("/index.html","/static/**","/login_p");
+    ｝
+    @Override
+    protected void configure(HttpSecurity http)throws Exception
+    http.authorizeRequests().withobjectPostProcessor(new AObectPostProcessor)<FiltersecurityInterceptor>(){
+    @Override
+    public ＜o extends FilterSecurityInterceptor>O postProcess(O o){
+    o.setSecurityMetadataSource(metadataSource);
+    o.setAccessDecisionManager(urlAccessDecisionManager);
+    return o;
+}
+｝}
+   o.and().formLogin().loginPage("/login p").loginProcessingUrl("/login").usernameParameter("username").passwordParameter("password").failureHandler(new AuthenticationFailureHandler(){
+   @Override
+   public void onAuthenticationFailure(HttpServletRequest req,HttpServletResponse resp,AuthenticationException e)throws IOException{
+    wblugsnresp.setContentType("application/json;charset=utf-8");
+    RespBean respBean=null;
+    if(e instanceof BadCredentialsException || e instanceof UsernameNotFoundException){
+      respBean=RespBean.error（"账户名或者密码输入错误！"）;
+     ｝else if(e instanceof LockedException){
+      respBean=RespBean.error("账户被锁定，请联系管理员！"）;
+    ｝else if(e instanceof CredentialsExpiredException){
+      respBean=RespBean.error("密码过期，请联系管理员！”）;
+    ｝else if(e instanceof AccountExpiredException){
+     respBean=RespBean.error(“账户过期，请联系管理员！"）;
+    ｝else if(e instanceof DisabledException){o
+     respBean=RespBean.error(”账户被票用，请联系管理员！”）;
+    ｝else {
+     respBean=RespBean.error(“登录失败");
+    ｝
+    resp.setStatus(401);
+    ObjectMapper om=new ObjectMapper();
+    Printwriter out=resp.getwriter():
+    out.write(om.writeValueAsString(respBean));
+    out.flush();eHsdeeoAnons
+    out.close();
+    }
+ })
+.successHandler(new AuthenticationSuccessHandler()
+   @Override
+   public void onAuthenticationSuccess(HttpServletRequest req,HttpServletResponse resp,Authentication auth) throws IOException{
+   resp.setContentType("application/json;charset=utf-8");
+   RespBean respBean=RespBean.ok("登录成功！”，HrUtils.getCurrentHr());
+   ObjectMapper om=new ObjectMapper();
+   PrintWriter out=resp.getwriter();
+   out.write(om.writeValueAsString(respBean));denoddiw
+   out.flush();
+   out.close();
+}
+｝)
+.permitA1l()oteooAltu).and().logout().permitA1l().land().csrf().disable().exceptionHandling().accessDeniedHandler(deniedHandler);
+   ｝
+}
+```
+## 代码解释：
 
+* 首先通过@EnableGlobalMethodSecurity 注解开启基于注解的安全配置，启用@PreAuthorize和@PostAuthorize两个注解。
 
+* 在配置类中注入之前创建的4个Bean,在 AuthenticationManagerBuilder 中配置userDetailsService和passwordEncoder.
 
+* 在 WebSecurity 中配置需要忽略的路径。
 
+* 在 HttpSecurity 中配置拦截规则、表单登录、登录成功或失败的响应等。
 
+* 最后通过accessDeniedHandler配置异常处理。
 
+另外，前文提到MenuService 中的 getAllMenu 方法在每次请求时都需要查询数据库，效率极低，因此可以将该数据缓存下来，代码如下：
+```java
+@Service
+@Transactional
+@CacheConfig(cacheNames="menus_cache")
+public class MenuService{
+    @Autowired
+    MenuMapper menuMapper;
+    @Cacheable(key="＃root.methodName")
+    public List<Menu>getAllMenu(){
+       return menuMapper.getAllMenu();
+    }
+}
+```
+##注意
 
+>这里使用方法名作为缓存的key,另外需要在项目启动类添加@EnableCashing注解开启缓存。
+
+PostMan测试（待写）
+
+## 前端实现
+### 引入Element和Axios
+
+前端UI使用Element，网络请求则使用Axios，
+代码如下：
+```
+npm i element-ui -S
+npm i axios -S
+```
+依赖添加成功后，接下来在main.js中引入Element
+代码如下
+```
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI)
+```
+引入Element 之后，接下来就可以在项目中直接使用相关组件了。
+对于网络请求，由于在每一次请求时都需要判断各种异常情况，然后提示用户，例如请求是否成功、失败的原因等，考虑到这些判断基本上都使用重复的代码，因此可以将网络请求封装，做成Vue的插件方便使用。由于封装的代码比较长，这里就不贴出来了，读者可以在GitHub 上查看，地址为 [app.js](https://github.com/lenve/vhr/blob/master/vuehr/src/utils/api.js)配置完成后，在main.js中导入封装的方法，然后配置为Vue的prototype,代码如下：
+
+```
+import {postRequest} from "./utils/api";
+import {postKeyValueRequest} from "./utils/api";
+import {putRequest} from "./utils/api";
+import {deleteRequest} from "./utils/api";
+import {getRequest} from "./utils/api";
+import {initMenu} from "./utils/menus";
+import 'font-awesome/css/font-awesome.min.css'
+Vue.prototype.postRequest = postRequest;
+Vue.prototype.postKeyValueRequest = postKeyValueRequest;
+Vue.prototype.putRequest = putRequest;
+Vue.prototype.deleteRequest = deleteRequest;
+Vue.prototype.getRequest = getRequest;
+```
+配置完成后，接下来对于任何需要使用网络请求的地址，都可以使用this.XXX执行一个网络请求，例如要执行登录请求，就可以通过this.postRequest(url,param)执行。
+### 开发 Login 页面
+接下来在 components 目录下创建 Login.vue 页面进行登录页面开发，代码如下：
+```
+<template>
+    <div>
+        <el-form
+                :rules="rules"
+                ref="loginForm"
+                v-loading="loading"
+                element-loading-text="正在登录..."
+                element-loading-spinner="el-icon-loading"
+                element-loading-background="rgba(0, 0, 0, 0.8)"
+                :model="loginForm"
+                class="loginContainer">
+            <h3 class="loginTitle">系统登录</h3>
+            <el-form-item prop="username">
+                <el-input size="normal" type="text" v-model="loginForm.username" auto-complete="off"
+                          placeholder="请输入用户名"></el-input>
+            </el-form-item>
+            <el-form-item prop="password">
+                <el-input size="normal" type="password" v-model="loginForm.password" auto-complete="off"
+                          placeholder="请输入密码"></el-input>
+            </el-form-item>
+            <el-form-item prop="code">
+                <el-input size="normal" type="text" v-model="loginForm.code" auto-complete="off"
+                          placeholder="点击图片更换验证码" @keydown.enter.native="submitLogin" style="width: 250px"></el-input>
+                <img :src="vcUrl" @click="updateVerifyCode" alt="" style="cursor: pointer">
+            </el-form-item>
+            <el-checkbox size="normal" class="loginRemember" v-model="checked"></el-checkbox>
+            <el-button size="normal" type="primary" style="width: 100%;" @click="submitLogin">登录</el-button>
+        </el-form>
+    </div>
+</template>
+
+<script>
+
+    export default {
+        name: "Login",
+        data() {
+            return {
+                loading: false,
+                vcUrl: '/verifyCode?time='+new Date(),
+                loginForm: {
+                    username: 'admin',
+                    password: '123',
+                    code:''
+                },
+                checked: true,
+                rules: {
+                    username: [{required: true, message: '请输入用户名', trigger: 'blur'}],
+                    password: [{required: true, message: '请输入密码', trigger: 'blur'}],
+                    code: [{required: true, message: '请输入验证码', trigger: 'blur'}]
+                }
+            }
+        },
+        methods: {
+            updateVerifyCode() {
+                this.vcUrl = '/verifyCode?time='+new Date();
+            },
+            submitLogin() {
+                this.$refs.loginForm.validate((valid) => {
+                    if (valid) {
+                        this.loading = true;
+                        this.postRequest('/doLogin', this.loginForm).then(resp => {
+                            this.loading = false;
+                            if (resp) {
+                                this.$store.commit('INIT_CURRENTHR', resp.obj);
+                                window.sessionStorage.setItem("user", JSON.stringify(resp.obj));
+                                let path = this.$route.query.redirect;
+                                this.$router.replace((path == '/' || path == undefined) ? '/home' : path);
+                            }else{
+                                this.vcUrl = '/verifyCode?time='+new Date();
+                            }
+                        })
+                    } else {
+                        return false;
+                    }
+                });
+            }
+        }
+    }
+</script>
+
+<style>
+    .loginContainer {
+        border-radius: 15px;
+        background-clip: padding-box;
+        margin: 180px auto;
+        width: 350px;
+        padding: 15px 35px 15px 35px;
+        background: #fff;
+        border: 1px solid #eaeaea;
+        box-shadow: 0 0 25px #cac6c6;
+    }
+
+    .loginTitle {
+        margin: 15px auto 20px auto;
+        text-align: center;
+        color: #505458;
+    }
+
+    .loginRemember {
+        text-align: left;
+        margin: 0px 0px 15px 0px;
+    }
+    .el-form-item__content{
+        display: flex;
+        align-items: center;
+    }
+</style>    
+```
+
+配置路由
+```
+import Vue from 'vue'
+import Router from 'vue-router'
+import Login from './views/Login.vue'
+import Home from './views/Home.vue'
+import FriendChat from './views/chat/FriendChat.vue'
+import HrInfo from './views/HrInfo.vue'
+
+Vue.use(Router)
+
+export default new Router({
+    routes: [
+        {
+            path: '/',
+            name: 'Login',
+            component: Login,
+            hidden: true
+        }, {
+            path: '/home',
+            name: 'Home',
+            component: Home,
+            hidden: true,
+            meta: {
+                roles: ['admin', 'user']
+            },
+            children: [
+                {
+                    path: '/chat',
+                    name: '在线聊天',
+                    component: FriendChat,
+                    hidden: true
+                }, {
+                    path: '/hrinfo',
+                    name: '个人中心',
+                    component: HrInfo,
+                    hidden: true
+                }
+            ]
+        }, {
+            path: '*',
+            redirect: '/home'
+        }
+    ]
+})
+```
+修改去除默认VueLogo
+
+```
+<template>
+  <div id="app">
+    <router-view/>
+  </div>
+</template>
+```
+#### 配置请求转发
+修改config的index.js文件，修改proxyTable，代码如下：
+```
+```
+#### 启动前端项目
+
+ ```
+ npm run dev
+ ```
+
+ ### 动态加载用户菜单
 
 
 
