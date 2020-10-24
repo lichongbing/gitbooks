@@ -207,41 +207,8 @@ newbee mall 后台管理系统所有的功能点列举如下（**建议放大图
 视频图解
 <iframe height=586 width=600 src='https://image.lichongbing.com/static/%E9%83%AB%E5%8E%BF%E7%99%BE%E4%BC%A6%E7%88%B1%E8%BE%BE%E4%B9%90%E8%9B%8B%E7%B3%95%E5%BA%972017%E5%B9%B44%E6%9C%88.mp4' frameborder=0 'allowfullscreen'></iframe>
 
-## 2017-07-17
 
-`2017-07-17`
 
-- 新增组件
-
-<!-- /timeline -->
-
-<!-- timeline -->
-
-## 2017-07-18
-
-`2017-07-18`
-
-- 新增组件-2
-
-<!-- timeline -->
-
-## 2017-07-17
-
-`2017-07-17`
-
-- 新增组件
-
-<!-- /timeline -->
-
-<!-- timeline -->
-
-## 2017-07-18
-
-`2017-07-18`
-
-- 新增组件-2
-
-<!-- /timeline -->
 
 - [x] write some articles
 
