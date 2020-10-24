@@ -205,4 +205,43 @@ newbee mall 后台管理系统所有的功能点列举如下（**建议放大图
 
 不仅仅如此，也希望朋友们可以举一反三将知识点扩展开来，以上这些不仅仅是咱们这个商城项目才需要注意的，也可以引申到其他类型的系统，对于系统设计和功能点的拆分、罗列也可以用到其他系统中，能够对自己所做项目的每一个细节、每一个知识点，涉及到的方方面面都有一个较为清晰的认识（当然，也不可能面面俱到，那就尽量做到吧），只有这样才能够在心中构建一个良好的知识体系，以后再碰到问题也就可以迎刃而解了。
 视频图解
-<iframe height=498 width=510 src='https://player.youku.com/embed/XNDc2Njg1Nzc1Ng==' frameborder=0 'allowfullscreen'></iframe>
+<iframe height=586 width=600 src='https://image.lichongbing.com/static/%E9%83%AB%E5%8E%BF%E7%99%BE%E4%BC%A6%E7%88%B1%E8%BE%BE%E4%B9%90%E8%9B%8B%E7%B3%95%E5%BA%972017%E5%B9%B44%E6%9C%88.mp4' frameborder=0 'allowfullscreen'></iframe>
+
+## 2017-07-17
+
+`2017-07-17`
+
+- 新增组件
+
+<!-- /timeline -->
+
+<!-- timeline -->
+
+## 2017-07-18
+
+`2017-07-18`
+
+- 新增组件-2
+
+<!-- timeline -->
+
+## 2017-07-17
+
+`2017-07-17`
+
+- 新增组件
+
+<!-- /timeline -->
+
+<!-- timeline -->
+
+## 2017-07-18
+
+`2017-07-18`
+
+- 新增组件-2
+
+<!-- /timeline -->
+
+- [x] write some articles
+
