@@ -1,10 +1,10 @@
 <a id="1"></a>
-## 整理实战JavaWeb项目
+### 整理实战JavaWeb项目
 
 <a id="2"></a>
-### 微人事项目实战
+#### 微人事项目实战
 
-#### 要点
+###### 要点
 
 * 微人事项目介绍
 
@@ -31,20 +31,20 @@
 
 
 
-### 项目简介
+#### 项目简介
 
 人事管理系统是一种常见的企业后台管理系统，它的主要目的是加强各个部门之间的协调提高工作效率。人事管理系统提供了员工资料管理、人事管理、工资管理、统计管理以及系统管理等功能，通过人事管理统，人事组织部门能做到以人为中心，各部门之间实现资源共享，并且实现即时通信，提高工作效率，简化烦琐的手工统计、信息汇总和工资业务等大量的人工工作，让人事组织和工资管理工作在人事组织相关的部门之间活跃起来。
 
 
-### 技术架构
+#### 技术架构
 本项目采用当下流行的前后端分离的方式开发，后端使用 Spring Boot开发，前端使用Vue+ElementUI来构建SPA.SPA 是指 Single-Page Application,即单页面应用，SPA应用通过动 本重写当前页面来与用户交互，而非传统的从服务器重新加载整个新页面。这种方法避免了页面之间切换打断用户体验，使应用程序更像一个桌面应用程序。在SPA中，所有的HTML、JavaScript和CSS都通过单个页面的加载来检索，或者根据用户操作动态装载适当的资源并添加到页面。在SPA中，前端将通过Ajax与后端通信。对于开发者而言，SPA最直观的感受就是项目开发完成后，只有一个 HTML页面，所有页面的跳转都通过路由进行导航。前后端分离的另一个好处是一个后端可以对应多个前端，由于后端只负责提供数据，前后端的交互都是通过JSON数据完成的，因此后端开发成功后，前端可以是PC端页面，也可以是Android、iOS以及微信小程序等。
 
-### 系统设计
+#### 系统设计
 
 ![Sample Flowchart Template.jpg](Sample Flowchart Template.jpg)
 
 
-#### Vue简介
+###### Vue简介
 
 
 Vue(读音／vju:/,类似于 view)是一套用于构建用户界面的渐进式框架。与其他大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 完全能够为复杂的单页应用提供驱动。－Vue 官网
@@ -52,17 +52,17 @@ Vue(读音／vju:/,类似于 view)是一套用于构建用户界面的渐进式�
 
 对于Vue的基础知识，本书不做过多介绍，由于Vue的文档都是中文文档，因此强烈建议初字者通读官方文档来了解Vue 的基本使用方法（地址为 https://cn.vuejs.org/v2/guide/),本书后面将直接介绍Vue 在项目中的使用。
 
-#### Element 简介
+###### Element 简介
 Vue 桌面端组件库非常多，比较流行的有 Element、Vux、iView、mint-ui、muse-ui等，本项术用 Element 作为前端页面组件库。要说设计，这些UI库差异都不是很大，基本上都是Materialcsign 风格的，本项目采用 Element 主要考虑到该库的使用人数较多（截至写作本书时，Element的GitHub上的 star数已达 29000,接近30000),出了问题容易找到解决方案。关于Element的，强烈建议初学者通读官方文档学习（地址为http://element-cn.eleme.io/#/zh-CN/component). 
 
 
-#### 其他
+###### 其他
 
 除了前端技术点外，后端用到的技术主要就是第1~15 章提到的技术，这里就不详细展开了
 章
-### 项目构建
+#### 项目构建
 
-#### 前端项目构建
+###### 前端项目构建
 
 
 Vue 项目使用 webpack 来构建。首先确保本地已经安装了 NodeJS,然后在CMD中执行如下
@@ -92,7 +92,7 @@ Generated vuehr".
 ```
 
 
-### 基本信息主要包括：
+#### 基本信息主要包括：
 
 * 项目名称。
 
@@ -114,7 +114,7 @@ Generated vuehr".
 前执行“npm install”。
 
 当“npm run dev”命令执行之后，在浏览器中输入 http://localhost:8080,显示页面
-### 后端项目构建
+#### 后端项目构建
 
 后端使用 Spring Boot 创建一个 Spring Boot工程，添加 spring-boot-starter-web 依赖即可：
 
@@ -126,7 +126,7 @@ Generated vuehr".
 ```
 当然，后端所需的依赖不止spring-boot-starter-web,在后文功能不断完善的过程中，再继续鼎具他依赖。另外，后端项目所需的Redis 配置、邮件发送配置、POI配置、WebSocket配置等将在涉及相关功能时向读者介绍。
 
-### 数据模型设计
+#### 数据模型设计
 
 ![employee.jpg](employee.jpg)
 
@@ -412,10 +412,10 @@ mail_send_log表（邮件发送日志表）
 
 经过以上准备工作，项目环境就已经基本搭建成功了。另外，对于Redis的安装、启动等，读者可以参考第6章，这里不再赘述。
 
-## 登录模块
+### 登录模块
 
 
-### 后端接口实现
+#### 后端接口实现
 
 后端权限认证采用 Spring Security 实现（本小节中大量知识点与第10章的内容相关，需要读练享握第10章的内容），数据库访问使用MyBatis,同时使用Redis实现认证信息缓存。因此叫自光添加如下依赖（依次是MvBatis 依赖、Spring Security 依赖、Redis 依赖、数据库连接池依赖、数据库驱动依赖以及缓存依赖）
 ```xml
@@ -650,7 +650,7 @@ public class Hr implements UserDetails {
 
 ```
 
-### 代码解释：
+#### 代码解释：
 
 * 自定义类继承自 UserDetails,并实现该接口中相关的方法。前端用户在登录成功后，需要获取当前登录用户的信息，对于一些敏感信息不必返回，使用@JsonIgnore注解即可。
 
@@ -718,7 +718,7 @@ public class CustomFilterInvocationSecurityMetadataSource implements FilterInvoc
     }
 }
 ```
-### 代码解释：
+#### 代码解释：
 
 
 * 在getAttributes 方法中首先提取出请求 URL,根据请求URL判断该请求需要的角色信息。
@@ -799,7 +799,7 @@ public class CustomUrlDecisionManager implements AccessDecisionManager {
     }
 }
 ```
-### 代码解释：
+#### 代码解释：
 * 在decide方法中判断当前用户是否具备请求需要的角色，若该方法在执行过程中未抛出异常，则说明请求可以通过；若抛出异常，则说明请求权限不足。
 * 如果所需要的角色是 ROLE LOGIN,那么只需要判断 auth 不是匿名用户的实例，即表示当前用户已登录。
 
@@ -890,7 +890,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
    ｝
 }
 ```
-## 代码解释：
+### 代码解释：
 
 * 首先通过@EnableGlobalMethodSecurity 注解开启基于注解的安全配置，启用@PreAuthorize和@PostAuthorize两个注解。
 
@@ -916,14 +916,14 @@ public class MenuService{
     }
 }
 ```
-##注意
+###注意
 
 >这里使用方法名作为缓存的key,另外需要在项目启动类添加@EnableCashing注解开启缓存。
 
 PostMan测试（待写）
 
-## 前端实现
-### 引入Element和Axios
+### 前端实现
+#### 引入Element和Axios
 
 前端UI使用Element，网络请求则使用Axios，
 代码如下：
@@ -956,7 +956,7 @@ Vue.prototype.deleteRequest = deleteRequest;
 Vue.prototype.getRequest = getRequest;
 ```
 配置完成后，接下来对于任何需要使用网络请求的地址，都可以使用this.XXX执行一个网络请求，例如要执行登录请求，就可以通过this.postRequest(url,param)执行。
-### 开发 Login 页面
+#### 开发 Login 页面
 接下来在 components 目录下创建 Login.vue 页面进行登录页面开发，代码如下：
 ```
 <template>
@@ -1123,19 +1123,19 @@ export default new Router({
   </div>
 </template>
 ```
-#### 配置请求转发
+###### 配置请求转发
 修改config的index.js文件，修改proxyTable，代码如下：
 ```
 
 ```
 
-#### 启动前端项目
+###### 启动前端项目
 
  ```
  npm run dev
  ```
 
- ### 动态加载用户菜单
+ #### 动态加载用户菜单
 
 
 
