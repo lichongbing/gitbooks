@@ -143,7 +143,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
  *     // produces: 'Joe went to <a href="http://www.yahoo.com">yahoo.com</a>'
  *
  *
- * ### Custom Replacements of Links
+ * ## Custom Replacements of Links
  *
  * If the configuration options do not provide enough flexibility, a {@link #replaceFn}
  * may be provided to fully customize the output of Autolinker. This function is
@@ -365,7 +365,7 @@ Autolinker.prototype = {
 	/**
 	 * @cfg {Number/Object} [truncate=0]
 	 *
-	 * ### Number Form
+	 * ## Number Form
 	 *
 	 * A number for how many characters matched text should be truncated to
 	 * inside the text of a link. If the matched text is over this number of
@@ -384,7 +384,7 @@ Autolinker.prototype = {
 	 *  Defaults to `0` for "no truncation."
 	 *
 	 *
-	 * ### Object Form
+	 * ## Object Form
 	 *
 	 * An Object may also be provided with two properties: `length` (Number) and
 	 * `location` (String). `location` may be one of the following: 'end'
@@ -1081,7 +1081,7 @@ Autolinker.Util = {
  * Autolinker uses this abstraction to create HTML tags, and then write them out as strings. You may also use
  * this class in your code, especially within a {@link Autolinker#replaceFn replaceFn}.
  *
- * ### Examples
+ * ## Examples
  *
  * Example instantiation:
  *
@@ -1114,7 +1114,7 @@ Autolinker.Util = {
  *     tag.toAnchorString();  // <a href="http://google.com" class="external-link">Google</a>
  *
  *
- * ### Example use within a {@link Autolinker#replaceFn replaceFn}
+ * ## Example use within a {@link Autolinker#replaceFn replaceFn}
  *
  *     var html = Autolinker.link( "Test google.com", {
  *         replaceFn : function( autolinker, match ) {
@@ -1129,7 +1129,7 @@ Autolinker.Util = {
  *     //   Test <a href="http://google.com" target="_blank" rel="nofollow">google.com</a>
  *
  *
- * ### Example use with a new tag for the replacement
+ * ## Example use with a new tag for the replacement
  *
  *     var html = Autolinker.link( "Test google.com", {
  *         replaceFn : function( autolinker, match ) {
@@ -19952,7 +19952,7 @@ module.exports = function footnote(state, startLine, endLine, silent) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-// heading (#, ###, ...)
+// heading (#, ##, ...)
 
 
 
@@ -19980,7 +19980,7 @@ module.exports = function heading(state, startLine, endLine, silent) {
 
   if (silent) { return true; }
 
-  // Let's cut tails like '    ####  ' from the end of string
+  // Let's cut tails like '    ###  ' from the end of string
 
   max = state.skipCharsBack(max, 0x20, pos); // space
   tmp = state.skipCharsBack(max, 0x23, pos); // #
