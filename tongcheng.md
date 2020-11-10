@@ -112,14 +112,20 @@ lsof -i:4568
 端口2020  6060  等端口都要打开
 
 
-宝塔外网面板地址: [http://47.99.221.64:8888/c6dbcb2b](http://47.99.221.64:8888/c6dbcb2b)
+>宝塔外网面板地址:
+
+ [http://47.99.221.64:8888/c6dbcb2b](http://47.99.221.64:8888/c6dbcb2b)
 
 username: xxszqae6
 
 password: f1f06c14
 
-shell终端登录：47.99.221.64 
+>shell终端登录
+
+ip：47.99.221.64 
+
 username:root
+
 password:xgkLIJIN@369
 
 # 聊天对接文档说明：
