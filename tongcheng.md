@@ -118,6 +118,10 @@ username: xxszqae6
 
 password: f1f06c14
 
+shell终端登录：47.99.221.64 
+username:root
+password:xgkLIJIN@369
+
 # 聊天对接文档说明：
 
 
