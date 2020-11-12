@@ -580,7 +580,8 @@ curl -v -u 6a3feac16ff0fc98d1e146144a145350:api_token \
 		auto_estimates ":false,"
 		actual_hours ":3,"
 		hex_color ":"
-		#465bb3"},{"id":164326374,"wid":4760695,"name":"走路","billable":false,"is_private":true,"active":true,"template":false,"at":"2020-10-15T15:23:37+00:00","created_at":"2020-10-15T15:23:37+00:00","color":"5","auto_estimates":false,"actual_hours":8,"hex_color":"# 2 da608 "},{"
+		#465bb3"},
+        {"id":164326374,"wid":4760695,"name":"走路","billable":false,"is_private":true,"active":true,"template":false,"at":"2020-10-15T15:23:37+00:00","created_at":"2020-10-15T15:23:37+00:00","color":"5","auto_estimates":false,"actual_hours":8,"hex_color":"# 2 da608 "},{"
 		id ":164217452,"
 		wid ":4760695,"
 		name ":"
@@ -636,10 +637,109 @@ curl -v -u 6a3feac16ff0fc98d1e146144a145350:api_token \
 		hex_color ":"
 		#0b83d9"},{"id":164395453,"wid":4760695,"name":"骑自行车","billable":false,"is_private":true,"active":true,"template":false,"at":"2020-10-17T12:04:28+00:00","created_at":"2020-10-17T12:04:28+00:00","color":"1","auto_estimates":false,"hex_color":"# 9e5 bd9 "}]
 ```
+## 获取tags标签
+```
+curl -v -u 6a3feac16ff0fc98d1e146144a145350:api_token \
+-X GET https://api.track.toggl.com/api/v8/workspaces/4760695/tags
+```
+## response
+```
+[{
+	"id": 8732785,
+	"wid": 4760695,
+	"name": "billed",
+	"at": "2020-11-02T01:59:38+00:00"
+}, {
+	"id": 8661246,
+	"wid": 4760695,
+	"name": "娱乐",
+	"at": "2020-10-19T00:45:25+00:00"
+}, {
+	"id": 8661231,
+	"wid": 4760695,
+	"name": "财务",
+	"at": "2020-10-19T00:38:26+00:00"
+}, {
+	"id": 8661230,
+	"wid": 4760695,
+	"name": "用餐",
+	"at": "2020-10-19T00:37:39+00:00"
+}, {
+	"id": 8661201,
+	"wid": 4760695,
+	"name": "思考",
+	"at": "2020-10-19T00:28:38+00:00"
+}, {
+	"id": 8661200,
+	"wid": 4760695,
+	"name": "工作",
+	"at": "2020-10-19T00:28:26+00:00"
+}, {
+	"id": 8661191,
+	"wid": 4760695,
+	"name": "内务",
+	"at": "2020-10-19T00:23:59+00:00"
+}, {
+	"id": 8661187,
+	"wid": 4760695,
+	"name": "运动",
+	"at": "2020-10-19T00:23:24+00:00"
+}, {
+	"id": 8661186,
+	"wid": 4760695,
+	"name": "休息",
+	"at": "2020-10-19T00:23:10+00:00"
+}, {
+	"id": 8661183,
+	"wid": 4760695,
+	"name": "社交",
+	"at": "2020-10-19T00:23:01+00:00"
+}, {
+	"id": 8661180,
+	"wid": 4760695,
+	"name": "打理",
+	"at": "2020-10-19T00:22:34+00:00"
+}, {
+	"id": 8661178,
+	"wid": 4760695,
+	"name": "学习",
+	"at": "2020-10-19T00:21:29+00:00"
+}, {
+	"id": 8661177,
+	"wid": 4760695,
+	"name": "出行",
+	"at": "2020-10-19T00:20:50+00:00"
+}]
 
+```
+
+## 开始time_entries
 ```
 curl -v -u 6a3feac16ff0fc98d1e146144a145350:api_token \
 	-H "Content-Type: application/json" \
-	-d '{"time_entry":{"description":"出门","tags":["billed"],"pid":164219444,"created_with":"curl"}}' \
+	-d '{"time_entry":{"description":"出门","tags":["出行"],"pid":164219444,"created_with":"curl"}}' \
 	-X POST https://api.track.toggl.com/api/v8/time_entries/start
+```
+## response
+```
+{
+	"data": {
+		"id": 1752793442,
+		"wid": 4760695,
+		"pid": 164219444,
+		"billable": false,
+		"start": "2020-11-02T01:59:38Z",
+		"duration": -1604282378,
+		"description": "出门",
+		"tags": ["billed"],
+		"duronly": false,
+		"at": "2020-11-02T01:59:38+00:00",
+		"uid": 6226292
+	}
+}
+```
+
+```
+curl -v -u 6a3feac16ff0fc98d1e146144a145350:api_token -H "Content-Type: application/json" -d '{"time_entry":{"description":"当前日期当前位置 (街道)","tags":["工作"],"pid":164242509,"created_with":"curl"}}' -X POST https://api.track.toggl.com/api/v8/time_entries/start
+
 ```
