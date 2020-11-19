@@ -8,7 +8,7 @@
 
  im网站[https://sns.yuelingnet.cn/im/h5/](https://sns.yuelingnet.cn/im/h5/)
 
- im源码地址[https://Lichongbing@bitbucket.org/Lichongbing/im.makerjie.com.git](https://Lichongbing@bitbucket.org/Lichongbing/im.makerjie.com.git)
+ im源码地址[https://bitbucket.org/Lichongbing/im.makerjie.com/src/master/](https://bitbucket.org/Lichongbing/im.makerjie.com/src/master/)
  
 
  
