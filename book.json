@@ -9,11 +9,13 @@
         }
     },
     "plugins": [
-        "simple-mind-map",    
+        "simple-mind-map",
         "new-flowchart",
         "mermaid-gb3@2.1.0",
         "hide-element",
-        "-lunr", "-search","search-plus@^0.0.11",
+        "-lunr",
+        "-search",
+        "search-plus@^0.0.11",
         "back-to-top-button",
         "openwrite",
         "code",
@@ -22,8 +24,8 @@
         "-livereload",
         "expandable-chapters",
         "timeline",
-        "todo"
-
+        "todo",
+        "html5-video"
     ],
     "pluginsConfig": {
         "simple-mind-map": {
@@ -32,14 +34,16 @@
             "linkShape": "diagonal",
             "autoFit": true,
             "style": {
-                "height":  "750px",
-                "wight":  "1000px"
-              } 
+                "height": "750px",
+                "wight": "1000px"
+            }
         },
         "hide-element": {
-            "elements": [".gitbook-link"]
+            "elements": [
+                ".gitbook-link"
+            ]
         },
-        "openwrite":{
+        "openwrite": {
             "blogId": "18972-1576749538667-677",
             "name": "谦谦君子",
             "qrcode": "https://image.lichongbing.com/qrcode_for_gh_29bad7d68f3a_258.jpg",
@@ -50,8 +54,5 @@
                 "prismjs/themes/prism-tomorrow.css"
             ]
         }
-
-       
-        
     }
 }

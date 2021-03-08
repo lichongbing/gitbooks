@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/workspaces",
+      "handler": "workspaces.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/workspaces/count",
+      "handler": "workspaces.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/workspaces/:id",
+      "handler": "workspaces.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/workspaces",
+      "handler": "workspaces.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/workspaces/:id",
+      "handler": "workspaces.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/workspaces/:id",
+      "handler": "workspaces.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

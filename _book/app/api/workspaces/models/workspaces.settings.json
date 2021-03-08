@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workspaces",
+  "info": {
+    "name": "Workspaces"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "premium": {
+      "type": "boolean"
+    },
+    "admin": {
+      "type": "boolean"
+    },
+    "default_hourly_rate": {
+      "type": "float"
+    },
+    "default_currency": {
+      "type": "string"
+    },
+    "only_admins_may_create_projects": {
+      "type": "boolean"
+    },
+    "only_admins_see_billable_rates": {
+      "type": "boolean"
+    },
+    "rounding": {
+      "type": "biginteger"
+    },
+    "rounding_minutes": {
+      "type": "biginteger"
+    },
+    "at": {
+      "type": "datetime"
+    },
+    "logo_url": {
+      "type": "string"
+    }
+  }
+}
